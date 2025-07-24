@@ -19,8 +19,8 @@ function App() {
       <CategorySection/>
       <Locations/>
       <Contact/>
-    </BrowserRouter>
     <Footer/>
+    </BrowserRouter>
     </>
   )
 }
