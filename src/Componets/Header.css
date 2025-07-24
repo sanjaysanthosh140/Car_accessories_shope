@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b060f;
+  padding: 1rem 2rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #ccc;
+}
+
+.dropdown {
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.join-btn {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.explore-btn {
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
