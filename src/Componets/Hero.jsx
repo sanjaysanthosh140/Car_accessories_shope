@@ -1,22 +1,19 @@
-import React from 'react'
-import './Hero.css'
+// HeroHeader.jsx
+import React from 'react';
+import './Hero.css';
+//import heroImage from './hero-car.jpg'; // Replace with your actual hero image
 
 const Hero = () => {
-  return (
-    <section className="hero">
-      <div className="hero-content">
-        <h1>Discover the Best Car Accessories Today!</h1>
-        <p>
-          Explore our exclusive range of car accessories designed to enhance your driving
-          experience. Don't miss out on our special offers and latest arrivals!
-        </p>
-        <div className="hero-buttons">
-          <button className="btn-white">Shop</button>
-          <button className="btn-outline">Learn More</button>
-        </div>
-      </div>
-    </section>
-  )
-}
+    return (
+        <header className="hero-header" style={{ backgroundImage: `url(${''})` }}>
+            <div className="hero-overlay"></div>
+            <div className="hero-content">
+                <h1 className="hero-title">Unleash Your Ride's True Potential</h1>
+                <p className="hero-tagline">Premium Car Accessories for the Discerning Enthusiast</p>
+                <button className="hero-cta-button">Shop Now</button>
+            </div>
+        </header>
+    );
+};
 
-export default Hero
+export default Hero;

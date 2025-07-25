@@ -1,63 +1,182 @@
-.header {
+/* Navbar.css */
+.navbar {
+  background: linear-gradient(90deg, rgba(30, 30, 30, 0.9) 0%, rgba(50, 50, 50, 0.9) 100%);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0b060f;
-  padding: 1rem 2rem;
-  color: white;
-  font-family: 'Poppins', sans-serif;
+  height: 80px;
+  max-width: 1500px;
+  width: 100%;
+  padding: 0 20px;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.nav {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.nav a {
-  color: white;
+.navbar-logo {
+  justify-self: start;
+  cursor: pointer;
   text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
-}
-
-.nav a:hover {
-  color: #ccc;
-}
-
-.dropdown {
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-.actions {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  /* Removed text styling as it's now an image */
 }
 
-.join-btn {
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 20px;
-  padding: 0.4rem 1rem;
-  color: white;
-  cursor: pointer;
-  font-size: 0.9rem;
+.logo-image {
+  height: 45px; /* Adjust logo height as needed */
+  transition: transform 0.3s ease-in-out;
 }
 
-.explore-btn {
-  background: white;
-  color: black;
-  border: none;
-  border-radius: 20px;
-  padding: 0.4rem 1.2rem;
-  font-weight: 500;
+.logo-image:hover {
+  transform: scale(1.08); /* Slightly more pronounced hover for image */
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: -22px;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  transition: all 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #00e676;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.nav-links:hover {
+  color: #00e676;
+  transform: translateY(-2px);
+}
+
+.nav-links:hover::after {
+  transform: translateX(0);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
   cursor: pointer;
-  font-size: 0.9rem;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+}
+
+.menu-icon div {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon.open .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .bar2 {
+  opacity: 0;
+}
+
+.menu-icon.open .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 960px) {
+  .navbar-container {
+      padding: 0 20px;
+  }
+
+  .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 70%; /* Adjusted width to avoid edge visibility */
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      right: -100%; /* Changed from left to right */
+      left: auto; /* Ensure left is auto when using right */
+      opacity: 1;
+      transition: all 0.5s ease-in-out; /* Smooth transition */
+      background: rgba(30, 30, 30, 0.95);
+      justify-content: center;
+      align-items: center;
+      z-index: 998;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4); /* Shadow on the left edge */
+  }
+
+  .nav-menu.active {
+      right: 0; /* Slides in from the right */
+      opacity: 1;
+  }
+
+  .nav-item {
+      margin: 1.5rem 0;
+      height: auto;
+  }
+
+  .nav-links {
+      padding: 1rem 0;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+  }
+
+  .nav-links::after {
+      display: none;
+  }
+
+  .nav-links:hover {
+      color: #00e676;
+      transform: none;
+  }
+
+  .menu-icon {
+      display: flex;
+  }
+}
+
+/* Further Mobile Adjustments */
+@media screen and (max-width: 480px) {
+  .nav-menu {
+      width: 85%; /* Slightly wider for smaller phones */
+  }
+
+  .logo-image {
+      height: 40px; /* Slightly smaller logo for very small screens */
+  }
 }

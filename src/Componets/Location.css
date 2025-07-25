@@ -1,84 +1,250 @@
-.locations {
-  background-color: #0b0e11;
-  color: white;
+/* OurLocations.css */
+.locations-section {
+  padding: 80px 20px;
+  background-color: #1a1a1a;
+  color: #ffffff;
   text-align: center;
-  padding: 4rem 1rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-.locations-tagline {
-  font-size: 0.85rem;
-  color: #bbb;
-  margin-bottom: 0.4rem;
+  overflow: hidden;
 }
 
 .locations-title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 0.6rem;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 5px 15px rgba(0, 230, 118, 0.2);
+  position: relative;
+  display: inline-block;
 }
 
-.locations-subtext {
-  font-size: 0.95rem;
-  color: #aaa;
-  margin-bottom: 3rem;
+.locations-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 100px;
+  height: 4px;
+  background-color: #00e676;
+  border-radius: 2px;
 }
 
-.locations-container {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
+.locations-tagline {
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+  color: #ccc;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .location-card {
-  background-color: #14171a;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  width: 300px;
-  max-width: 100%;
-  text-align: left;
+  background: linear-gradient(145deg, #222, #333);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 230, 118, 0.15);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInSlideUp 0.8s ease-out forwards;
 }
 
-.location-city {
-  font-size: 1.1rem;
-  margin: 1rem 0 0.5rem;
-  color: white;
-}
+.location-card:nth-child(1) { animation-delay: 0.1s; }
+.location-card:nth-child(2) { animation-delay: 0.3s; }
 
-.location-address {
-  font-size: 0.85rem;
-  color: #ccc;
-  margin-bottom: 1rem;
-}
-
-.location-link {
-  font-size: 0.9rem;
-  color: #fff;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
-}
-
-.location-link:hover {
-  border-color: #fff;
-}
-
-.arrow {
-  font-size: 1.1rem;
-}
-
-/* ✅ Responsive */
-@media (max-width: 768px) {
-  .locations-title {
-    font-size: 1.5rem;
+@keyframes fadeInSlideUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
   }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
-  .locations-container {
-    flex-direction: column;
-    align-items: center;
+.location-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 230, 118, 0.4);
+  background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+}
+
+.location-name {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 25px 20px 15px;
+  color: #00e676;
+  text-shadow: 0 2px 8px rgba(0, 230, 118, 0.3);
+  position: relative;
+  border-bottom: 1px solid rgba(0, 230, 118, 0.1);
+}
+
+.map-embed-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* 4:3 Aspect Ratio (adjust as needed) */
+  background-color: #000;
+  border-bottom: 1px solid rgba(0, 230, 118, 0.1);
+}
+
+.map-embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(0.7) invert(0.1) brightness(0.9); /* Subtle dark theme for map */
+  transition: filter 0.4s ease;
+}
+
+.location-card:hover .map-embed-container iframe {
+  filter: grayscale(0) invert(0) brightness(1); /* Colorize map on hover */
+}
+
+
+.location-details {
+  padding: 25px;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.location-details p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  color: #ccc;
+}
+
+.location-details p svg {
+  margin-right: 10px;
+  color: #00e676;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.location-details p a {
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.location-details p a:hover {
+  color: #00e676;
+  text-decoration: underline;
+}
+
+.get-directions-button {
+  display: inline-block;
+  background-color: #00e676;
+  color: #1a1a1a;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 230, 118, 0.3);
+  margin-top: 20px;
+  text-decoration: none;
+  align-self: flex-start; /* Align button to the left */
+}
+
+.get-directions-button:hover {
+  background-color: #00cc66;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 230, 118, 0.5);
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .locations-title {
+      font-size: 2.5rem;
+  }
+  .locations-tagline {
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+  }
+  .locations-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+  }
+  .location-name {
+      font-size: 1.8rem;
+  }
+  .location-details p {
+      font-size: 1rem;
+  }
+  .get-directions-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .locations-section {
+      padding: 60px 15px;
+  }
+  .locations-title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+  }
+  .locations-tagline {
+      font-size: 0.95rem;
+      margin-bottom: 40px;
+  }
+  .locations-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+  }
+  .location-card {
+      padding-bottom: 0; /* Remove padding-bottom as button aligns itself */
+  }
+  .location-name {
+      font-size: 1.6rem;
+  }
+  .location-details {
+      padding: 20px;
+  }
+  .location-details p {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+  }
+  .location-details p svg {
+      font-size: 1.1rem;
+  }
+  .get-directions-button {
+      width: 100%; /* Make button full width on mobile */
+      text-align: center;
+      align-self: center; /* Center button */
+  }
+}
+
+@media (max-width: 480px) {
+  .locations-title {
+      font-size: 1.8rem;
+  }
+  .locations-tagline {
+      font-size: 0.85rem;
+  }
+  .map-embed-container {
+      padding-bottom: 85%; /* Adjust aspect ratio for smaller screens if needed */
   }
 }

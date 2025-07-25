@@ -1,49 +1,60 @@
-import React from 'react'
-import './CategorySection.css'
+// FeaturesList.jsx
+import React from "react";
+import "./CategorySection.css";
+import { FaShippingFast, FaAward, FaTags, FaCarAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-const categories = [
+const features = [
   {
-    title: 'Premium Car Floor Mats',
-    desc: "Protect your vehicle's interior with our durable floor mats.",
+    icon: <FaShippingFast />,
+    title: "Fast & Secure Shipping",
+    description:
+      "Get your parts delivered swiftly and safely to your doorstep.",
+    direct: "/mat",
   },
   {
-    title: 'High-Performance Dash Cam',
-    desc: 'Capture every moment on the road with crystal-clear video.',
+    icon: <FaAward />,
+    title: "Premium Quality Products",
+    description:
+      "Only the best accessories from trusted brands for your vehicle.",
+    direct: "/mat",
   },
   {
-    title: 'Stylish Steering Wheel Cover',
-    desc: "Upgrade your car's interior with our chic steering wheel cover.",
-  }
-]
+    icon: <FaTags />,
+    title: "Competitive Pricing",
+    description: "Enjoy great value on all our automotive enhancements.",
+    direct: "/mat",
+  },
+  {
+    icon: <FaCarAlt />,
+    title: "Expert Support",
+    description: "Our team of car enthusiasts is here to help you choose.",
+    direct: "/mat",
+  },
+];
 
-const CategorySection = () => {
+const FeaturesList = () => {
+  const navigate = useNavigate();
+  const direct = (directto) => {
+    navigate(`${directto}`);
+  };
   return (
-    <section className="category-section">
-      <p className="category-subheading">Discover</p>
-      <h2 className="category-heading">Top Picks for Your Car Accessories</h2>
-      <p className="category-description">
-        Explore our handpicked selection of car accessories designed to enhance your driving
-        experience. From stylish interiors to cutting-edge electronics, we have everything you need.
-      </p>
-
-      <div className="category-cards">
-        {categories.map((item, index) => (
-          <div className="category-card" key={index}>
-            <div className="category-image-placeholder" />
-            <h3 className="category-title">{item.title}</h3>
-            <p className="category-text">{item.desc}</p>
-          </div>
+    <section className="features-section">
+      <div className="features-container">
+        {features.map((feature, index) => (
+          <button
+            className="feature-card"
+            key={index}
+            onClick={() => direct(feature.direct)}
+          >
+            <div className="feature-icon">{feature.icon}</div>
+            <h3 className="feature-title">{feature.title}</h3>
+            <p className="feature-description">{feature.description}</p>
+          </button>
         ))}
       </div>
-
-      <div className="category-buttons">
-        <button className="btn-outline">Shop</button>
-        <button className="btn-arrow">
-          Learn More <span className="arrow">→</span>
-        </button>
-      </div>
     </section>
-  )
-}
+  );
+};
 
-export default CategorySection
+export default FeaturesList;

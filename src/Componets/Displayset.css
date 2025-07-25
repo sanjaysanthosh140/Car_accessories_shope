@@ -1,0 +1,272 @@
+/* CarSeatDisplay.css */
+.car-seat-display-section {
+    padding: 80px 20px;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.car-seat-display-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at center, rgba(0, 230, 118, 0.08) 0%, transparent 50%);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.display-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display-title {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 5px 20px rgba(0, 230, 118, 0.2);
+}
+
+.display-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+    color: #ccc;
+    font-weight: 300;
+}
+
+.seat-viewer-wrapper {
+    background: linear-gradient(145deg, rgba(30, 30, 30, 0.9), rgba(40, 40, 40, 0.9));
+    border: 1px solid rgba(0, 230, 118, 0.2);
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 230, 118, 0.1);
+    margin-bottom: 50px;
+
+    /* KEY CHANGES FOR PERFECT CIRCULAR FIT */
+    width: clamp(280px, 80vw, 550px); /* Responsive, but defined width/height for square */
+    height: clamp(280px, 80vw, 550px); /* Maintain 1:1 aspect ratio with width */
+    max-width: 550px; /* Max size for the circle */
+    max-height: 550px; /* Max size for the circle */
+    
+    display: flex; /* Use flex to center content directly */
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden; /* Clips content to the circle */
+    backdrop-filter: blur(5px);
+}
+
+/* No need for aspect-ratio or padding tricks here anymore due to fixed width/height */
+/* Removed @supports block */
+
+.car-seat-image-container {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* This container will now be the actual space for the image */
+    width: calc(100% - 60px); /* 100% minus 2 * padding (30px) */
+    height: calc(100% - 60px); /* 100% minus 2 * padding (30px) */
+    
+    position: relative; /* Keep relative for inner elements if any, though not strictly needed for image itself */
+}
+
+.car-seat-image-container.animating {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.car-seat-image {
+    width: 100%; /* Image fills its container */
+    height: 100%; /* Image fills its container */
+    object-fit: contain; /* ESSENTIAL: Ensures the 1:1 image scales down to fit while maintaining aspect ratio, leaving empty space if container isn't 1:1 */
+    display: block;
+    filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.5)); /* Soft shadow for depth */
+}
+
+
+.color-selectors {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    background: rgba(40, 40, 40, 0.6);
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 230, 118, 0.1);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1s ease-out forwards 0.5s;
+    opacity: 0;
+    max-width: 800px; /* Set a max-width for the color selectors strip */
+    width: 100%; /* Ensure it takes full width up to max */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.color-swatch {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--swatch-color);
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.color-swatch:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.2);
+    border-color: rgba(0, 230, 118, 0.5);
+}
+
+.color-swatch.active {
+    border-color: #00e676;
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4), inset 0 0 10px rgba(0, 230, 118, 0.5);
+}
+
+/* Tooltip for color name */
+.color-swatch::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.color-swatch:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.color-swatch::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.color-swatch:hover::after {
+    opacity: 1;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .display-title {
+        font-size: 3rem;
+    }
+    .display-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+    .seat-viewer-wrapper {
+        width: clamp(250px, 70vw, 450px);
+        height: clamp(250px, 70vw, 450px);
+        max-width: 450px;
+        max-height: 450px;
+    }
+    .color-selectors {
+        gap: 20px;
+        padding: 12px 0;
+    }
+    .color-swatch {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .car-seat-display-section {
+        padding: 60px 15px;
+    }
+    .display-title {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    .display-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    .seat-viewer-wrapper {
+        width: clamp(200px, 85vw, 350px); /* More flexible on small screens */
+        height: clamp(200px, 85vw, 350px);
+        max-width: 350px;
+        max-height: 350px;
+        margin-bottom: 40px;
+    }
+    .color-selectors {
+        gap: 15px;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .color-swatch {
+        width: 45px;
+        height: 45px;
+    }
+    .color-swatch::before {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .display-title {
+        font-size: 1.8rem;
+    }
+    .display-subtitle {
+        font-size: 0.9rem;
+    }
+    .seat-viewer-wrapper {
+        width: clamp(180px, 90vw, 300px); /* Even tighter for very small screens */
+        height: clamp(180px, 90vw, 300px);
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .color-selectors {
+        gap: 10px;
+        padding: 8px;
+    }
+    .color-swatch {
+        width: 40px;
+        height: 40px;
+    }
+}
