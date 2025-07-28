@@ -6,17 +6,21 @@ import Locations from "./Componets/Location";
 import Contact from "./Componets/Contact";
 import Footer from "./Componets/Footer";
 import CarSeatDisplay from "./Componets/Displayset";
+import CarMatDisplay from "./Componets/Car_mat";
+import ProductCard from "./Componets/Carts";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Header />
+        <Hero />
         <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/mat" element={<CarSeatDisplay />} />
-
+          <Route path="/" element={<CategorySection />} />
+          <Route path="/seats" element={<CarSeatDisplay/>} />
+          <Route path="/mat" element={<CarMatDisplay/>} />
+          <Route path='/cart' element={<ProductCard/>}/>
         </Routes>
-        <CategorySection />
+        
         <Locations />
         {/* <Contact /> */}
         <Footer />

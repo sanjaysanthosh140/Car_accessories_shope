@@ -23,7 +23,7 @@ const Navbar = () => {
                 </div>
                 <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
                     <li className="nav-item">
-                        <a href="#home" className="nav-links" onClick={() => setIsOpen(false)}>Home</a>
+                        <a href="/" className="nav-links" onClick={() => setIsOpen(false)}>Home</a>
                     </li>
                     <li className="nav-item">
                         <a href="#products" className="nav-links" onClick={() => setIsOpen(false)}>Products</a>

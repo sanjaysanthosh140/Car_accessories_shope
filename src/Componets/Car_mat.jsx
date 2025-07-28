@@ -5,14 +5,15 @@ import "./Car_mat.css";
 // Import your car mat images. You'll need different images for each color.
 // For example, car-mat-black.png, car-mat-red.png, etc.
 import carMatBlack from "../assets/mats/gray.jpg";
-import carMatRed from "../assets/mats/gray.jpg";
+import carMatRed from "../assets/mats/gray.jpg"; 
+
 import carMatGray from "../assets/mats/mat_brown.jpg";
 import carMatBrown from "../assets/mats/matblack_back.jpg";
 
 const colors = [
   { name: "Black", hex: "#1a1a1a", image: carMatBlack },
   { name: "Red", hex: "#c0392b", image: carMatRed },
-  { name: "Gray", hex: "#7f8c8d", image: carMatGray },
+
   { name: "Camel", hex: "#C19A6B", image: "" },
   { name: "Spl_Came", hex: "#B88A62", image: "" },
   { name: "Light Browin", hex: "#B59982", image: "" },
@@ -29,6 +30,7 @@ const colors = [
   { name: "Blue", hex: "#0000FF", image: "" },
   { name: "Light Grey", hex: "#D3D3D3", image: "" },
   { name: "B_Tan", hex: "#A67B5B", image: "" },
+
   { name: "Dark_Brown", hex: "#654321", image: "" },
   { name: "Off_White", hex: "#F8F8F0", image: "" },
   { name: "Royal_Beige", hex: "#EDE0C8", image: "" },

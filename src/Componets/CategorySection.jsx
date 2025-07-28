@@ -10,7 +10,7 @@ const features = [
     title: "Fast & Secure Shipping",
     description:
       "Get your parts delivered swiftly and safely to your doorstep.",
-    direct: "/mat",
+    direct: "/seats",
   },
   {
     icon: <FaAward />,
@@ -23,7 +23,7 @@ const features = [
     icon: <FaTags />,
     title: "Competitive Pricing",
     description: "Enjoy great value on all our automotive enhancements.",
-    direct: "/mat",
+    direct: "/cart",
   },
   {
     icon: <FaCarAlt />,
