@@ -5,6 +5,18 @@
   color: #ffffff;
   text-align: center;
   overflow: hidden;
+  position: relative;
+}
+
+.locations-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 230, 118, 0.05) 0%, transparent 50%, rgba(0, 230, 118, 0.05) 100%);
+  z-index: 0;
 }
 
 .locations-title {
@@ -15,6 +27,7 @@
   text-shadow: 0 5px 15px rgba(0, 230, 118, 0.2);
   position: relative;
   display: inline-block;
+  z-index: 2;
 }
 
 .locations-title::after {
@@ -25,8 +38,9 @@
   bottom: -10px;
   width: 100px;
   height: 4px;
-  background-color: #00e676;
+  background: linear-gradient(90deg, transparent, #00e676, transparent);
   border-radius: 2px;
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.5);
 }
 
 .locations-tagline {
@@ -36,28 +50,39 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 2;
+  position: relative;
+  line-height: 1.6;
 }
 
 .locations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .location-card {
-  background: linear-gradient(145deg, #222, #333);
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  transition: all 0.4s ease;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0, 230, 118, 0.15);
+  position: relative;
   transform: translateY(20px);
   opacity: 0;
   animation: fadeInSlideUp 0.8s ease-out forwards;
+  min-height: 400px;
 }
 
 .location-card:nth-child(1) { animation-delay: 0.1s; }
@@ -74,10 +99,33 @@
   }
 }
 
+.location-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 1;
+}
+
 .location-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 230, 118, 0.4);
-  background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(0, 230, 118, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.location-card:hover::before {
+  opacity: 1;
 }
 
 .location-name {
@@ -88,14 +136,19 @@
   text-shadow: 0 2px 8px rgba(0, 230, 118, 0.3);
   position: relative;
   border-bottom: 1px solid rgba(0, 230, 118, 0.1);
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .map-embed-container {
   position: relative;
   width: 100%;
-  padding-bottom: 75%; /* 4:3 Aspect Ratio (adjust as needed) */
+  padding-bottom: 75%;
   background-color: #000;
   border-bottom: 1px solid rgba(0, 230, 118, 0.1);
+  overflow: hidden;
+  z-index: 2;
 }
 
 .map-embed-container iframe {
@@ -105,14 +158,15 @@
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(0.7) invert(0.1) brightness(0.9); /* Subtle dark theme for map */
-  transition: filter 0.4s ease;
+  filter: grayscale(0.3) brightness(0.8);
+  transition: all 0.6s ease;
+  border-radius: 0;
 }
 
 .location-card:hover .map-embed-container iframe {
-  filter: grayscale(0) invert(0) brightness(1); /* Colorize map on hover */
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.05);
 }
-
 
 .location-details {
   padding: 25px;
@@ -121,6 +175,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 2;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgba(0, 230, 118, 0.2);
+}
+
+.location-card:hover .location-details {
+  transform: translateY(0);
 }
 
 .location-details p {
@@ -129,6 +198,7 @@
   display: flex;
   align-items: center;
   color: #ccc;
+  line-height: 1.4;
 }
 
 .location-details p svg {
@@ -136,6 +206,7 @@
   color: #00e676;
   font-size: 1.3rem;
   flex-shrink: 0;
+  filter: drop-shadow(0 0 5px rgba(0, 230, 118, 0.5));
 }
 
 .location-details p a {
@@ -151,7 +222,7 @@
 
 .get-directions-button {
   display: inline-block;
-  background-color: #00e676;
+  background: linear-gradient(135deg, #00e676, #00cc66);
   color: #1a1a1a;
   padding: 12px 25px;
   border: none;
@@ -163,88 +234,347 @@
   box-shadow: 0 4px 15px rgba(0, 230, 118, 0.3);
   margin-top: 20px;
   text-decoration: none;
-  align-self: flex-start; /* Align button to the left */
+  align-self: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.get-directions-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.get-directions-button:hover::before {
+  left: 100%;
 }
 
 .get-directions-button:hover {
-  background-color: #00cc66;
+  background: linear-gradient(135deg, #00cc66, #00e676);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 230, 118, 0.5);
 }
 
-/* Tablet Responsive */
-@media (max-width: 1024px) {
-  .locations-title {
-      font-size: 2.5rem;
-  }
-  .locations-tagline {
-      font-size: 1.1rem;
-      margin-bottom: 50px;
-  }
-  .locations-grid {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-  }
-  .location-name {
-      font-size: 1.8rem;
-  }
-  .location-details p {
-      font-size: 1rem;
-  }
-  .get-directions-button {
-      padding: 10px 20px;
-      font-size: 1rem;
-  }
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* Large Desktop (1400px and up) */
+@media screen and (min-width: 1400px) {
   .locations-section {
-      padding: 60px 15px;
+    padding: 120px 40px;
   }
-  .locations-title {
-      font-size: 2rem;
-      margin-bottom: 15px;
-  }
-  .locations-tagline {
-      font-size: 0.95rem;
-      margin-bottom: 40px;
-  }
+  
   .locations-grid {
-      grid-template-columns: 1fr;
-      gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    max-width: 1400px;
   }
+  
   .location-card {
-      padding-bottom: 0; /* Remove padding-bottom as button aligns itself */
+    min-height: 450px;
   }
-  .location-name {
-      font-size: 1.6rem;
+  
+  .locations-title {
+    font-size: 3.5rem;
   }
-  .location-details {
-      padding: 20px;
-  }
-  .location-details p {
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-  }
-  .location-details p svg {
-      font-size: 1.1rem;
-  }
-  .get-directions-button {
-      width: 100%; /* Make button full width on mobile */
-      text-align: center;
-      align-self: center; /* Center button */
+  
+  .locations-tagline {
+    font-size: 1.3rem;
   }
 }
 
-@media (max-width: 480px) {
+/* Desktop (1200px to 1399px) */
+@media screen and (max-width: 1399px) and (min-width: 1200px) {
+  .locations-section {
+    padding: 100px 30px;
+  }
+  
+  .locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+  }
+  
+  .location-card {
+    min-height: 420px;
+  }
+}
+
+/* Large Tablet (1024px to 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  .locations-section {
+    padding: 90px 25px;
+  }
+  
   .locations-title {
-      font-size: 1.8rem;
+    font-size: 2.8rem;
   }
+  
   .locations-tagline {
-      font-size: 0.85rem;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
   }
+  
+  .locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+  }
+  
+  .location-card {
+    min-height: 400px;
+  }
+  
+  .location-name {
+    font-size: 1.8rem;
+    padding: 22px 18px 12px;
+  }
+}
+
+/* Tablet Landscape (768px to 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .locations-section {
+    padding: 80px 20px;
+  }
+  
+  .locations-title {
+    font-size: 2.5rem;
+    margin-bottom: 18px;
+  }
+  
+  .locations-tagline {
+    font-size: 1rem;
+    margin-bottom: 45px;
+    padding: 0 20px;
+  }
+  
+  .locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+  }
+  
+  .location-card {
+    min-height: 380px;
+  }
+  
+  .location-name {
+    font-size: 1.6rem;
+    padding: 20px 16px 10px;
+  }
+  
+  .location-details {
+    padding: 20px;
+  }
+  
   .map-embed-container {
-      padding-bottom: 85%; /* Adjust aspect ratio for smaller screens if needed */
+    padding-bottom: 70%;
+  }
+}
+
+/* Tablet Portrait (600px to 767px) */
+@media screen and (max-width: 767px) and (min-width: 600px) {
+  .locations-section {
+    padding: 70px 18px;
+  }
+  
+  .locations-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .locations-tagline {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+    padding: 0 15px;
+  }
+  
+  .locations-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 600px;
+  }
+  
+  .location-card {
+    min-height: 350px;
+  }
+  
+  .location-name {
+    font-size: 1.5rem;
+    padding: 18px 15px 8px;
+  }
+  
+  .location-details {
+    padding: 18px;
+  }
+  
+  .map-embed-container {
+    padding-bottom: 75%;
+  }
+}
+
+/* Mobile Responsive - Stack cards vertically */
+@media screen and (max-width: 767px) {
+  .locations-section {
+    padding: 60px 20px;
+  }
+  
+  .locations-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .locations-tagline {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    padding: 0 15px;
+    line-height: 1.6;
+  }
+  
+  .locations-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .location-card {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 350px;
+  }
+  
+  .location-name {
+    font-size: 1.6rem;
+    padding: 18px 18px 10px;
+  }
+  
+  .location-details {
+    padding: 18px;
+  }
+  
+  .location-details p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .location-details p svg {
+    font-size: 1.1rem;
+    margin-right: 8px;
+  }
+  
+  .get-directions-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    margin-top: 15px;
+  }
+  
+  .map-embed-container {
+    padding-bottom: 75%;
+  }
+}
+
+/* Small Mobile - Ensure vertical stacking */
+@media screen and (max-width: 599px) {
+  .locations-grid {
+    grid-template-columns: 1fr; /* Force single column */
+    gap: 20px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .location-card {
+    min-height: 320px;
+    border-radius: 15px;
+    margin: 0 auto 20px auto; /* Add bottom margin for separation */
+  }
+}
+
+/* Extra Small Mobile - Maintain vertical layout */
+@media screen and (max-width: 479px) {
+  .locations-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 18px;
+    padding: 0 5px;
+  }
+  
+  .location-card {
+    min-height: 300px;
+    border-radius: 12px;
+    margin: 0 auto 15px auto;
+  }
+}
+
+/* Extra Extra Small Mobile */
+@media screen and (max-width: 319px) {
+  .locations-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 15px;
+    padding: 0 3px;
+  }
+  
+  .location-card {
+    min-height: 280px;
+    border-radius: 10px;
+    margin: 0 auto 12px auto;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .locations-section {
+    padding: 40px 20px;
+  }
+  
+  .locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .location-card {
+    min-height: 300px;
+  }
+  
+  .location-name {
+    font-size: 1.4rem;
+    padding: 15px 12px 8px;
+  }
+  
+  .location-details {
+    padding: 15px;
+  }
+}
+
+/* High DPI displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2), 
+       screen and (min-resolution: 192dpi) {
+  .location-card {
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Print styles */
+@media print {
+  .locations-section {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .location-card {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+  
+  .location-details {
+    transform: translateY(0);
+    position: relative;
+    background: #ffffff;
   }
 }

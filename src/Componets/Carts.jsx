@@ -7,7 +7,7 @@ const PremiumProductCard = () => {
     {
       id: 1,
       name: 'Carbon Fiber Steering Wheel',
-      image: 'https://picsum.photos/id/300/400/550', // Adjusted image dimensions for full card fill
+      image: 'https://picsum.photos/id/300/400/550',
       price: 599.99,
       description: 'Lightweight and durable with an ergonomic design for ultimate grip.',
     },
@@ -65,7 +65,7 @@ const PremiumProductCard = () => {
       name: 'Aerodynamic Body Kit',
       image: 'https://picsum.photos/id/308/400/550',
       price: 1800.00,
-      description: 'Enhance your car’s visual appeal and reduce drag at high speeds.',
+      description: 'Enhance your car\'s visual appeal and reduce drag at high speeds.',
     },
     {
       id: 10,
@@ -80,10 +80,14 @@ const PremiumProductCard = () => {
     <div className="products-grid-container">
       {products.map((product) => (
         <div key={product.id} className="premium-product-card">
-          <img src={product.image} alt={product.name} className="product-card-background-image" />
+          <img 
+            src={product.image} 
+            alt={product.name} 
+            className="product-card-background-image" 
+          />
           <div className="product-details-overlay">
             <h3 className="overlay-product-name">{product.name}</h3>
-            <p className="overlay-product-description">{product.description}</p> {/* Added description here */}
+            <p className="overlay-product-description">{product.description}</p>
             <p className="overlay-product-price">${product.price.toFixed(2)}</p>
             <button className="overlay-button">View Product</button>
           </div>

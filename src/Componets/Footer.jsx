@@ -42,28 +42,14 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="footer-column footer-links">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#shipping">Shipping & Returns</a></li>
-                        <li><a href="#orders">Order Tracking</a></li>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                    </ul>
-                </div>
+                
 
                 <div className="footer-column footer-contact">
                     <h4>Get In Touch</h4>
                     <p>123 Auto Street, Carville, CA 90210</p>
                     <p>Email: <a href="mailto:info@autoaccents.com">info@autoaccents.com</a></p>
                     <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-                    <div className="payment-icons">
-                        {/* Replace with actual payment method icons/images if desired */}
-                        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" />
-                        <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard" />
-                        <img src="https://img.icons8.com/fluency/48/000000/paypal.png" alt="PayPal" />
-                    </div>
+                    
                 </div>
             </div>
 

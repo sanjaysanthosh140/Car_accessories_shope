@@ -8,6 +8,7 @@ import Footer from "./Componets/Footer";
 import CarSeatDisplay from "./Componets/Displayset";
 import CarMatDisplay from "./Componets/Car_mat";
 import ProductCard from "./Componets/Carts";
+import VideoSlider from "./Componets/videos";
 function App() {
   return (
     <>
@@ -19,6 +20,8 @@ function App() {
           <Route path="/seats" element={<CarSeatDisplay/>} />
           <Route path="/mat" element={<CarMatDisplay/>} />
           <Route path='/cart' element={<ProductCard/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/about' element={<VideoSlider/>}/>
         </Routes>
         
         <Locations />

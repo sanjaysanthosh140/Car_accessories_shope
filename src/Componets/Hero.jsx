@@ -1,11 +1,11 @@
 // HeroHeader.jsx
 import React from 'react';
 import './Hero.css';
-//import heroImage from './hero-car.jpg'; // Replace with your actual hero image
+import heroImage from '../assets/giffs/hero_gif.gif';
 
 const Hero = () => {
     return (
-        <header className="hero-header" style={{ backgroundImage: `url(${''})` }}>
+        <header className="hero-header" style={{ backgroundImage: `url(${heroImage})` }}>
             <div className="hero-overlay"></div>
             <div className="hero-content">
                 <h1 className="hero-title">Unleash Your Ride's True Potential</h1>

@@ -1,4 +1,4 @@
-/* Car_mat.css */
+/* Displayset.css */
 .car-mat-display-section {
     padding: 80px 20px;
     background-color: #0f0f0f;
@@ -217,13 +217,29 @@
     opacity: 1;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for Displayset (Seat Covers) */
+/* Large screen and desktop */
+@media (max-width: 1200px) {
+    .display-container-mat {
+        max-width: 1000px;
+    }
+    .mat-content-wrapper {
+        max-width: 900px;
+        gap: 35px;
+    }
+}
+
+/* Tablet breakpoint */
 @media (max-width: 1024px) {
+    .car-mat-display-section {
+        padding: 70px 20px;
+    }
     .display-title-mat {
         font-size: 3rem;
     }
     .display-subtitle-mat {
         font-size: 1.2rem;
+        margin-bottom: 40px;
     }
     .mat-content-wrapper {
         flex-direction: column;
@@ -231,27 +247,30 @@
         gap: 30px;
     }
     .mat-viewer-wrapper {
-        width: clamp(280px, 80vw, 600px);
-        padding-top: calc(clamp(280px, 80vw, 600px) * 9 / 18);
+        width: clamp(350px, 70vw, 500px);
+        padding-top: calc(clamp(350px, 70vw, 500px) * 10 / 16);
+        margin-bottom: 25px;
     }
     .color-selectors-mat {
-        max-height: 300px;
-        width: 100%; /* Take full width on tablet when horizontal */
+        order: 2;
+        max-height: 350px;
+        width: 100%;
+        max-width: 550px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 15px;
-        gap: 15px;
+        padding: 18px;
+        gap: 14px;
     }
     .color-swatch-mat {
-        width: 45px; /* Slightly larger for horizontal layout on tablet */
-        height: 45px;
+        width: 48px;
+        height: 48px;
     }
     .color-swatch-mat::before,
     .color-swatch-mat::after {
         left: 50%;
         top: unset;
-        bottom: calc(100% + 10px);
+        bottom: calc(100% + 12px);
         transform: translateX(-50%);
         border-color: #333 transparent transparent transparent;
     }
@@ -263,58 +282,111 @@
     }
 }
 
+/* Medium tablet breakpoint */
 @media (max-width: 768px) {
     .car-mat-display-section {
-        padding: 60px 15px;
+        padding: 50px 15px;
     }
     .display-title-mat {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
+        margin-bottom: 12px;
     }
     .display-subtitle-mat {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 35px;
+        padding: 0 5px;
+    }
+    .mat-content-wrapper {
+        gap: 25px;
     }
     .mat-viewer-wrapper {
-        width: clamp(200px, 90vw, 450px);
-        padding-top: calc(clamp(200px, 90vw, 450px) * 9 / 18);
+        width: clamp(300px, 80vw, 420px);
+        padding-top: calc(clamp(300px, 80vw, 420px) * 10 / 16);
+    }
+    .color-selectors-mat {
+        max-height: 300px;
+        max-width: 420px;
+        padding: 15px;
+        gap: 12px;
+    }
+    .color-swatch-mat {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+    .car-mat-display-section {
+        padding: 40px 10px;
+    }
+    .display-title-mat {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+    .display-subtitle-mat {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        padding: 0 15px;
+        line-height: 1.4;
+    }
+    .mat-content-wrapper {
+        gap: 20px;
+    }
+    .mat-viewer-wrapper {
+        width: clamp(260px, 88vw, 320px);
+        padding-top: calc(clamp(260px, 88vw, 320px) * 10 / 16);
+    }
+    .car-mat-image-container {
+        top: 18px;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
     }
     .color-selectors-mat {
         max-height: 250px;
-        padding: 10px;
+        max-width: 320px;
+        padding: 12px;
         gap: 10px;
     }
     .color-swatch-mat {
         width: 40px;
         height: 40px;
     }
+    .color-swatch-mat::before {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+        border-radius: 4px;
+        white-space: nowrap;
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
-@media (max-width: 480px) {
+/* Extra small mobile screens */
+@media (max-width: 360px) {
+    .car-mat-display-section {
+        padding: 35px 8px;
+    }
     .display-title-mat {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
     .display-subtitle-mat {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     .mat-viewer-wrapper {
-        width: clamp(180px, 95vw, 350px);
-        padding-top: calc(clamp(180px, 95vw, 350px) * 9 / 18);
+        width: clamp(240px, 92vw, 280px);
+        padding-top: calc(clamp(240px, 92vw, 280px) * 10 / 16);
     }
     .color-selectors-mat {
-        max-height: 200px;
-        padding: 8px;
+        max-height: 220px;
+        padding: 10px;
         gap: 8px;
     }
     .color-swatch-mat {
-        width: 35px; /* Even smaller swatches for very small screens */
-        height: 35px;
-    }
-    /* Adjust tooltip for very small screens if necessary */
-    .color-swatch-mat::before {
-        left: calc(100% + 8px); /* Closer tooltip */
-        padding: 5px 8px;
-        font-size: 0.75rem;
-    }
-    .color-swatch-mat:hover::before {
-        transform: translateY(-50%) translateX(2px);
+        width: 36px;
+        height: 36px;
     }
 }

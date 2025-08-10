@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 //import AutoAccentsLogo from './autoaccents-logo.png'; // Make sure you have this image in your src folder
-
+import logo from '../assets/shop_logo.png'
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +14,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <a href="/" className="navbar-logo">
-                    <img src={''} alt="AutoAccents Logo" className="logo-image" />
+                    <img src={logo} alt="AutoAccents Logo" className="logo-image" />
                 </a>
                 <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
                     <div className="bar1"></div>
@@ -26,16 +26,16 @@ const Navbar = () => {
                         <a href="/" className="nav-links" onClick={() => setIsOpen(false)}>Home</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#products" className="nav-links" onClick={() => setIsOpen(false)}>Products</a>
+                        <a href="/cart" className="nav-links" onClick={() => setIsOpen(false)}>Products</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#categories" className="nav-links" onClick={() => setIsOpen(false)}>Categories</a>
+                        <a href="/" className="nav-links" onClick={() => setIsOpen(false)}>Categories</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#about" className="nav-links" onClick={() => setIsOpen(false)}>About Us</a>
+                        <a href="/about" className="nav-links" onClick={() => setIsOpen(false)}>About Us</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#contact" className="nav-links" onClick={() => setIsOpen(false)}>Contact</a>
+                        <a href="/contact" className="nav-links" onClick={() => setIsOpen(false)}>Contact</a>
                     </li>
                 </ul>
             </div>

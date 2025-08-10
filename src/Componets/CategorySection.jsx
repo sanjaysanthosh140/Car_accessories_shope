@@ -1,35 +1,35 @@
 // FeaturesList.jsx
 import React from "react";
 import "./CategorySection.css";
-import { FaShippingFast, FaAward, FaTags, FaCarAlt } from "react-icons/fa";
+import { FaTh, FaLayerGroup, FaAndroid, FaYoutube } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const features = [
   {
-    icon: <FaShippingFast />,
-    title: "Fast & Secure Shipping",
+    icon: <FaTh />,
+    title: "Premium Car Seats",
     description:
-      "Get your parts delivered swiftly and safely to your doorstep.",
+      "Luxury and comfortable car seats with ergonomic design for long drives.",
     direct: "/seats",
   },
   {
-    icon: <FaAward />,
-    title: "Premium Quality Products",
+    icon: <FaLayerGroup />,
+    title: "Car Floor Mats",
     description:
-      "Only the best accessories from trusted brands for your vehicle.",
+      "Durable and waterproof car mats to protect your vehicle's interior.",
     direct: "/mat",
   },
   {
-    icon: <FaTags />,
-    title: "Competitive Pricing",
-    description: "Enjoy great value on all our automotive enhancements.",
-    direct: "/cart",
+    icon: <FaAndroid />,
+    title: "Android Products",
+    description: "Smart Android devices and accessories for your modern car.",
+    direct: "/android",
   },
   {
-    icon: <FaCarAlt />,
-    title: "Expert Support",
-    description: "Our team of car enthusiasts is here to help you choose.",
-    direct: "/mat",
+    icon: <FaYoutube />,
+    title: "Video Reviews",
+    description: "Watch detailed product reviews and installation guides.",
+    direct: "/videos",
   },
 ];
 
