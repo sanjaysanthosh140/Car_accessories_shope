@@ -213,7 +213,7 @@ const TripleVideoSlider = () => {
                       </div>
                     </div>
                     <div className="card-back">
-                      <h3 className="card-title-back">{video.title}</h3>
+                      {/* <h3 className="card-title-back">{video.title}</h3> */}
                       <button 
                         className="navigation-btn"
                         onClick={(e) => {
