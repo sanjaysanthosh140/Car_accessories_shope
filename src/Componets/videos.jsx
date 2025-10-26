@@ -1,7 +1,6 @@
 // components/TripleVideoSlider.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import './video.css';
-
 const TripleVideoSlider = () => {
   const [flipped, setFlipped] = useState([]);
   const sliderRefs = useRef([]);
@@ -172,8 +171,7 @@ const TripleVideoSlider = () => {
   }, []);
 
   const handleVideoClick = (videoId) => {
-    // Handle video navigation
-    console.log(`Navigating to video: ${videoId}`);
+    window.location.href = `${videoId}`
   };
 
   return (
@@ -188,7 +186,7 @@ const TripleVideoSlider = () => {
 
       <div className="triple-slider-grid">
         {videoCategories.map((category, index) => (
-          <div key={category.category} className="slider-column">
+          <div key={category.category} className="slider-column" >
             <h3 className="category-title">{category.category}</h3>
             <div className="video-scroll-container" ref={(el) => (sliderRefs.current[index] = el)}>
               {category.videos.map((video) => (
@@ -197,6 +195,7 @@ const TripleVideoSlider = () => {
                   className={`video-card ${flipped.includes(video.id) ? 'flipped' : ''}`}
                   onClick={() => toggleFlip(video.id)}
                   style={{'--bg-image': `url(${video.thumbnail})`}}
+                  
                 >
                   <div className="corner-brackets">
                     <span></span>
@@ -205,15 +204,16 @@ const TripleVideoSlider = () => {
                     <span></span>
                   </div>
 
-                  <div className="card-inner">
+                  <div className="card-inner" onClick={()=>handleVideoClick(video.videoUrl)}>
                     <div className="card-front">
                       <div className="front-content">
                         <h3 className="card-title-front">{video.title}</h3>
                         <p className="card-about-front">{video.about}</p>
+
                       </div>
                     </div>
                     <div className="card-back">
-                      {/* <h3 className="card-title-back">{video.title}</h3> */}
+                      <h3 className="card-title-back">{video.title}</h3>
                       <button 
                         className="navigation-btn"
                         onClick={(e) => {

@@ -1,7 +1,7 @@
 // HeroHeader.jsx
 import React from 'react';
 import './Hero.css';
-import heroImage from '../assets/giffs/hero_gif.gif';
+import heroImage from '../assets/giffs/pexels-pixabay-221201.jpg';
 
 const Hero = () => {
     return (
