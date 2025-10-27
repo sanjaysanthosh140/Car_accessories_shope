@@ -1,63 +1,104 @@
 // Footer.jsx
-import React from 'react';
-import './Footer.css';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import React from "react";
+import "./Footer.css";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Footer = () => {
-    return (
-        <footer className="site-footer">
-            <div className="footer-container">
-                <div className="footer-column footer-brand">
-                    <h3 className="footer-logo">AUTOACCENTS</h3>
-                    <p className="brand-slogan">
-                        Driving Passion, Delivering Perfection. Your ultimate destination for premium car accessories.
-                    </p>
-                    <div className="social-icons">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <FaFacebookF />
-                        </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                            <FaTwitter />
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <FaInstagram />
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <FaLinkedinIn />
-                        </a>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                            <FaYoutube />
-                        </a>
-                    </div>
-                </div>
+  return (
+    <footer className="site-footer">
+      <div className="footer-container">
+        <div className="footer-column footer-brand">
+          <h3 className="footer-logo">AUTO TOUCH</h3>
+          <p className="brand-slogan">
+            QUALITY IS OUR SIGNATURE
+          </p>
+          <div className="social-icons">
+            <a
+              href="https://www.facebook.com/shahul.ta.50?mibextid=ZbWKwL
+"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href=" https://instagram.com/s_garage_cochin?igshid=NTc4MTIwNjQ2YQ==
+"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://youtube.com/@sgarage.836
+"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <FaYoutube />
+            </a>
+          </div>
+        </div>
 
-                <div className="footer-column footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Shop All</a></li>
-                        <li><a href="#categories">Categories</a></li>
-                        <li><a href="#new-arrivals">New Arrivals</a></li>
-                        <li><a href="#bestsellers">Bestsellers</a></li>
-                    </ul>
-                </div>
+        <div className="footer-column footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/cart">ProductCard</a>
+            </li>
+            <li>
+              <a href="/">Categories</a>
+            </li>
+            <li>
+              <a href="/seats">CarSeatDisplay</a>
+            </li>
+            <li>
+              <a href="/mat">CarMatDisplay</a>
+            </li>
+            <li>
+              <a href="/Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
 
-                
+        <div className="footer-column footer-contact">
+          <h4>Get In Touch</h4>
+          <p>
+            metro Pillar No 836, S.A Road,Janatha Jn, Vyttila, Amballur,
+            Ernakulam 682019
+          </p>
+          {/* <p> */}
+            {/* Email:{" "} */}
+            {/* <a href="mailto:info@autoaccents.com">info@autoaccents.com</a> */}
+          {/* </p> */}
+          <p>
+            Phone: <a href="tel:+919447151263">+91 94471 51263</a>
+          </p>
+        </div>
+      </div>
 
-                <div className="footer-column footer-contact">
-                    <h4>Get In Touch</h4>
-                    <p>123 Auto Street, Carville, CA 90210</p>
-                    <p>Email: <a href="mailto:info@autoaccents.com">info@autoaccents.com</a></p>
-                    <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-                    
-                </div>
-            </div>
-
-            <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} AutoAccents. All Rights Reserved.</p>
-            </div>
-        </footer>
-    );
+      <div className="footer-bottom">
+        <p>
+          &copy; {new Date().getFullYear()} AutoAccents. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

@@ -22,34 +22,34 @@ import jet_black_3 from "../assets/mats/image_18.jpg";
 import Deep_Maroon_3 from "../assets/mats/image_33.jpg";
 import Charcoal_gray2 from "../assets/mats/image_41.jpg";
 import Jet_Black_4 from "../assets/mats/image_15.jpg";
- import dark_carcoal_4 from "../assets/mats/image_3.jpg";
- import Charcoal_Black_3 from "../assets/mats/image_16.jpg";
- import Cream_Beige_2 from "../assets/mats/image_10.jpg";
+import dark_carcoal_4 from "../assets/mats/image_3.jpg";
+import Charcoal_Black_3 from "../assets/mats/image_16.jpg";
+import Cream_Beige_2 from "../assets/mats/image_10.jpg";
 import Dark_Charcoal_5 from "../assets/mats/image_34.jpg";
- import Jet_Black_5 from "../assets/mats/image_4.jpg";
- import Light_Taupe_1 from "../assets/mats/image_40.jpg";
+import Jet_Black_5 from "../assets/mats/image_4.jpg";
+import Light_Taupe_1 from "../assets/mats/image_40.jpg";
 import Charcoal_Gray_3 from "../assets/mats/image_8.jpg";
- import Tan_2 from "../assets/mats/image_13.jpg";
- import Deep_Maroon_4 from "../assets/mats/image_7.jpg";
- import Rust_Brown_2 from "../assets/mats/image_12.jpg";
- import Light_Taupse_2 from "../assets/mats/image_14.jpg";
- import Light_Taupe_3 from "../assets/mats/image_30.jpg";
- import Charcoal_Gray_4 from "../assets/mats/image_35.jpg";
+import Tan_2 from "../assets/mats/image_13.jpg";
+import Deep_Maroon_4 from "../assets/mats/image_7.jpg";
+import Rust_Brown_2 from "../assets/mats/image_12.jpg";
+import Light_Taupse_2 from "../assets/mats/image_14.jpg";
+import Light_Taupe_3 from "../assets/mats/image_30.jpg";
+import Charcoal_Gray_4 from "../assets/mats/image_35.jpg";
 import Deep_Maroon_5 from "../assets/mats/image_9.jpg";
 import Dark_Charcoal_6 from "../assets/mats/image_5.jpg";
- import Charcoal_Black_4 from "../assets/mats/image_28.jpg";
+import Charcoal_Black_4 from "../assets/mats/image_28.jpg";
 import Charcoal_Black_6 from "../assets/mats/image_24.jpg";
 import Charcoal_Gray_5 from "../assets/mats/image_20.jpg";
 import black_gray from "../assets/mats/image_11.jpg";
 import Charcoal_Black_7 from "../assets/mats/image_21.jpg";
 import Deep_Maroon_6 from "../assets/mats/image_19.jpg";
 import Cream_Beige_3 from "../assets/mats/image_27.jpg";
-import Cream_Beige_5  from "../assets/mats/image_44.jpg";
+import Cream_Beige_5 from "../assets/mats/image_44.jpg";
 import Charcoal_Black_8 from "../assets/mats/image_42.jpg";
 import Charcoal_Black_9 from "../assets/mats/image_45.jpg";
 // import Jet_Black_4 from "../assets/mats/image_.jpg";
 // import Jet_Black_4 from "../assets/mats/image_.jpg";
-// 
+//
 
 const colors = [
   { name: "Charcoal Black", hex: "#2A2E31", image: red_seat },
@@ -70,35 +70,33 @@ const colors = [
   { name: "Dark Charcoal_3", hex: "#22262B", image: Dark_Charcoal_3 },
   { name: "Jet Black_3", hex: "#0F0F0F", image: jet_black_3 },
   { name: "Deep Maroon_3", hex: "#401E27", image: Deep_Maroon_3 },
-  { name: "Charcoal Gray_2", hex: "#2D323A", image: Charcoal_gray2  },
-  { name: "Jet Black_4", hex: "#151515", image: Jet_Black_4  },
+  { name: "Charcoal Gray_2", hex: "#2D323A", image: Charcoal_gray2 },
+  { name: "Jet Black_4", hex: "#151515", image: Jet_Black_4 },
   { name: "Dark Charcoal_4", hex: "#272A2E", image: dark_carcoal_4 },
-  { name: "Charcoal Black_3", hex: "#23262B", image: Charcoal_Black_3  },
-  { name: "Cream Beige_2", hex: "#E1DCCD", image: Cream_Beige_2},
+  { name: "Charcoal Black_3", hex: "#23262B", image: Charcoal_Black_3 },
+  { name: "Cream Beige_2", hex: "#E1DCCD", image: Cream_Beige_2 },
   { name: "Dark Charcoal_5", hex: "#262A2E", image: Dark_Charcoal_5 },
-  { name: "Jet Black_5", hex: "#1A1A1B", image: Jet_Black_5},
+  { name: "Jet Black_5", hex: "#1A1A1B", image: Jet_Black_5 },
   { name: "Light Taupe_1", hex: "#B2A99B", image: Light_Taupe_1 },
   { name: "Charcoal Gray_3", hex: "#2B3037", image: Charcoal_Gray_3 },
   { name: "Tan_2", hex: "#A96F4B", image: Tan_2 },
   { name: "Deep Maroon_4", hex: "#3f19214e", image: Deep_Maroon_4 },
-  { name: "Rust Brown", hex: "#A75A39", image: Rust_Brown_2  },
+  { name: "Rust Brown", hex: "#A75A39", image: Rust_Brown_2 },
   { name: "Light Taupe_2", hex: "#B9B1A4", image: Light_Taupse_2 },
-  { name: "Light Taupe_3", hex: "#B3A99B", image: Light_Taupe_3  },
+  { name: "Light Taupe_3", hex: "#B3A99B", image: Light_Taupe_3 },
   { name: "Charcoal Gray_4", hex: "#2F3337", image: Charcoal_Gray_4 },
-  { name: "Deep Maroon_5", hex: "#401E25", image: Deep_Maroon_5},
-  { name: "Dark Charcoal_6", hex: "#2A2D31", image: Dark_Charcoal_6  },
-  { name: "Charcoal Black_4", hex: "#202429", image: Charcoal_Black_4  },
-  { name: "Charcoal Black_6", hex: "#22262B", image: Charcoal_Black_6  },
+  { name: "Deep Maroon_5", hex: "#401E25", image: Deep_Maroon_5 },
+  { name: "Dark Charcoal_6", hex: "#2A2D31", image: Dark_Charcoal_6 },
+  { name: "Charcoal Black_4", hex: "#202429", image: Charcoal_Black_4 },
+  { name: "Charcoal Black_6", hex: "#22262B", image: Charcoal_Black_6 },
   { name: "Charcoal Gray_5", hex: "#303337", image: Charcoal_Gray_5 },
   { name: "black_gray", hex: "#151516", image: black_gray },
-  { name: "Charcoal Black_7", hex: "#24272B", image: Charcoal_Black_7  },
+  { name: "Charcoal Black_7", hex: "#24272B", image: Charcoal_Black_7 },
   { name: "Deep Maroon_6", hex: "#3B1F25", image: Deep_Maroon_6 },
-  { name: "Light Taupe_4", hex: "#B9B1A4", image: Cream_Beige_3  },
-  { name: "Light Taupe_5", hex: "#B9B1A4", image: Cream_Beige_5  },
+  { name: "Light Taupe_4", hex: "#B9B1A4", image: Cream_Beige_3 },
+  { name: "Light Taupe_5", hex: "#B9B1A4", image: Cream_Beige_5 },
   { name: "Charcoal Black_8", hex: "#272A2E", image: Charcoal_Black_8 },
   { name: "Charcoal Black_9", hex: "#192029ff", image: Charcoal_Black_9 },
-  
- 
 ];
 
 // ...existing imports...

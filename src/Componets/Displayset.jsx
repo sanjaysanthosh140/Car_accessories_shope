@@ -25,11 +25,33 @@ import royal_begin from "../assets/royal_begin.png";
 import sliver_brown from "../assets/sliver_brown.png";
 import Mushroom from "../assets/Mushroom_gray.png";
 
+import Terracotta from "../assets/seats_1.jpg";
+import Saddle_Tan from "../assets/seats_2.jpg";
+import Burnt_Orange from "../assets/seats_3.jpg";
+import Bright_Fuchsia from "../assets/seats_4.jpg";
+import Deep_Magenta from "../assets/seats_5.jpg";
+import Warm_Beige from "../assets/seats_6.jpg";
+import Bright_Fuchsia_2 from "../assets/seats_7.jpg";
+import Terracotta_2 from "../assets/seats_8.jpg";
+import Jet_Black from "../assets/seats_9.jpg";
+import Light_Cream from "../assets/seats_10.jpg";
+import Russet_Brown from "../assets/seats_11.jpg";
+import Tangerine_Orange from "../assets/seats_12.jpg";
+import Pumpkin_Orange from "../assets/seats_13.jpg";
+import Charcoal_Black from "../assets/seats_14.jpg";
+
 const colors = [
   { name: "Black", hex: "#1a1a1a", image: blacke_red },
   { name: "Red", hex: "#c0392b", image: red_seat },
   { name: "Gray", hex: "#7f8c8d", image: gray_black },
   { name: "Camel", hex: "#C19A6B", image: camel_black },
+  { name: "Terracotta", hex: "#cd5c41", image: Terracotta },
+  { name: "Saddle Tan", hex: "#b6754b", image: Saddle_Tan },
+  { name: "Burnt Orange", hex: "#c96939", image: Burnt_Orange },
+  { name: "Bright Fuchsia_1", hex: "#e8338f", image: Bright_Fuchsia },
+  { name: "Deep Magenta", hex: "#d22d76", image: Deep_Magenta },
+  { name: "Warm Beige", hex: "#c9b699", image: Warm_Beige },
+  { name: "Bright Fuchsia_2", hex: "#e8338f", image: Bright_Fuchsia_2 },
   { name: "Spl_Came", hex: "#B88A62", image: spl_camel },
   { name: "Light Browin", hex: "#B59982", image: lite_brown },
   { name: "Beige", hex: "#F5F5DC", image: beige_black },
@@ -48,6 +70,14 @@ const colors = [
   { name: "Royal_Beige", hex: "#EDE0C8", image: royal_begin },
   { name: "Silver", hex: "#C0C0C0", image: sliver_brown },
   { name: "Mushroom", hex: "#BFAEA0", image: Mushroom },
+  ////
+  { name: "Terracotta", hex: "#cd5c41", image: Terracotta_2 },
+  { name: "Jet Black", hex: "#1e1e1e", image: Jet_Black },
+  { name: "Light Cream", hex: "#e1d3b7", image: Light_Cream },
+  { name: "Russet Brown", hex: "#964835", image: Russet_Brown },
+  { name: "Tangerine Orange", hex: "#e07f41", image: Tangerine_Orange },
+  { name: "Pumpkin Orange", hex: "#e07a3c", image: Pumpkin_Orange },
+  { name: "Charcoal Black", hex: "#1a1d21", image: Charcoal_Black },
 ];
 
 // ...existing imports...

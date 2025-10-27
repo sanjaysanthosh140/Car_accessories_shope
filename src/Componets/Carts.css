@@ -1,4 +1,7 @@
 /* Products Grid Container */
+body{
+ background-color: #000000;
+}
 .products-grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -8,6 +11,7 @@
   margin: 0 auto;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%);
   min-height: 100vh;
+  
 }
 
 /* Premium Product Card */

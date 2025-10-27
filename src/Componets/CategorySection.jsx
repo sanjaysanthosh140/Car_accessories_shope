@@ -23,7 +23,7 @@ const features = [
     icon: <FaAndroid />,
     title: "Android Products",
     description: "Smart Android devices and accessories for your modern car.",
-    direct: "/android",
+    direct: "/cart",
   },
   {
     icon: <FaYoutube />,
