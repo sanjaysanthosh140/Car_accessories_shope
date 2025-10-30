@@ -1,11 +1,5 @@
 import React, { useState } from "react";
 import "./Gallery.css";
-
-// import img1 from "../assets/";
-// import img2 from "";
-// import img3 from "";
-// import img4 from "";
-// import img5 from "";
 import img1 from "../assets/seats_1.jpg";
 import img2 from "../assets/seats_2.jpg";
 import img3 from "../assets/seats_3.jpg";
@@ -20,16 +14,6 @@ import img11 from "../assets/seats_11.jpg";
 import img12 from "../assets/seats_12.jpg";
 import img13 from "../assets/seats_13.jpg";
 import img14 from "../assets/seats_14.jpg";
-// let img1 =
-//   "https://up.yimg.com/ib/th/id/OIP.KhQ6fQiMyV_kFH15n41D9QHaGB?pid=Api&rs=1&c=1&qlt=95&w=136&h=110";
-// let img2 =
-//   "https://up.yimg.com/ib/th/id/OIP.nkYO0MDfYEXPhAAyQ-16NAHaEK?pid=Api&rs=1&c=1&qlt=95&w=217&h=122";
-// let img3 =
-//   "https://up.yimg.com/ib/th/id/OIP.KhQ6fQiMyV_kFH15n41D9QHaGB?pid=Api&rs=1&c=1&qlt=95&w=136&h=110";
-// let img4 =
-//   "https://up.yimg.com/ib/th/id/OIP.nkYO0MDfYEXPhAAyQ-16NAHaEK?pid=Api&rs=1&c=1&qlt=95&w=217&h=122";
-//let img5 =
-//"https://up.yimg.com/ib/th/id/OIP.nkYO0MDfYEXPhAAyQ-16NAHaEK?pid=Api&rs=1&c=1&qlt=95&w=217&h=122";
 const Gallery = () => {
   const images = [
     img1,

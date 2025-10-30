@@ -4,9 +4,11 @@
   justify-content: center;
   align-items: center;
   background-color: #000; /* black background */
-  padding: 50px; /* increased padding */
+  padding: 50px;
   min-height: 100vh;
   color: white;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 /* ======= Thumbnail Column ======= */
@@ -14,12 +16,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* increased spacing */
+  gap: 15px;
   margin-right: 30px;
+  max-height: 80vh; /* limits height */
+  overflow-y: auto; /* enables scroll on overflow */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #555 #000;
+}
+
+/* Chrome/Edge scrollbar */
+.thumbnail-column::-webkit-scrollbar {
+  width: 6px;
+}
+.thumbnail-column::-webkit-scrollbar-track {
+  background: #000;
+}
+.thumbnail-column::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
 }
 
 .thumbnail {
-  width: 90px; /* increased from 70px */
+  width: 90px;
   height: 90px;
   object-fit: cover;
   border-radius: 8px;
@@ -44,7 +62,7 @@
 }
 
 .main-image {
-  width: 550px; /* increased from 450px */
+  width: 550px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
@@ -58,7 +76,7 @@
   background-color: rgba(255, 255, 255, 0.15);
   color: white;
   border: none;
-  padding: 14px 18px; /* slightly bigger buttons */
+  padding: 14px 18px;
   font-size: 28px;
   border-radius: 50%;
   cursor: pointer;
@@ -78,16 +96,32 @@
 }
 
 /* ======= Responsive Design ======= */
+@media (max-width: 992px) {
+  .main-image {
+    width: 480px;
+  }
+}
+
 @media (max-width: 768px) {
   .gallery-container {
     flex-direction: column;
     padding: 25px;
   }
 
+  /* Thumbnails turn horizontal with scroll */
   .thumbnail-column {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 20px 0;
     gap: 12px;
+    max-width: 90vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .thumbnail-column::-webkit-scrollbar {
+    height: 6px;
   }
 
   .thumbnail {
@@ -100,10 +134,10 @@
   }
 
   .nav-btn.left {
-    left: 15px;
+    left: 10px;
   }
 
   .nav-btn.right {
-    right: 15px;
+    right: 10px;
   }
 }
