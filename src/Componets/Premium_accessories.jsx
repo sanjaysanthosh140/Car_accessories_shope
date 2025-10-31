@@ -57,6 +57,33 @@ import img51 from "../assets/premium_accessories/img51.jpg";
 import img52 from "../assets/premium_accessories/img52.jpg";
 import img53 from "../assets/premium_accessories/img53.jpg";
 
+import img54 from "../assets/premium_accessories/img54.jpg";
+import img55 from "../assets/premium_accessories/img55.jpg";
+import img56 from "../assets/premium_accessories/img56.jpg";
+import img57 from "../assets/premium_accessories/img57.jpg";
+import img58 from "../assets/premium_accessories/img58.jpg";
+import img59 from "../assets/premium_accessories/img59.jpg";
+import img60 from "../assets/premium_accessories/img60.jpg";
+import img61 from "../assets/premium_accessories/img61.jpg";
+import img62 from "../assets/premium_accessories/img62.jpg";
+import img63 from "../assets/premium_accessories/img63.jpg";
+import img64 from "../assets/premium_accessories/img64.jpg";
+import img65 from "../assets/premium_accessories/img65.jpg";
+import img66 from "../assets/premium_accessories/img66.jpg";
+import img67 from "../assets/premium_accessories/img67.jpg";
+import img68 from "../assets/premium_accessories/img68.jpg";
+import img69 from "../assets/premium_accessories/img69.jpg";
+import img70 from "../assets/premium_accessories/img70.jpg";
+import img71 from "../assets/premium_accessories/img71.jpg";
+import img72 from "../assets/premium_accessories/img72.jpg";
+import img73 from "../assets/premium_accessories/img73.jpg";
+import img74 from "../assets/premium_accessories/img74.jpg";
+import img75 from "../assets/premium_accessories/img75.jpg";
+import img76 from "../assets/premium_accessories/img76.jpg";
+import img77 from "../assets/premium_accessories/img77.jpg";
+import img78 from "../assets/premium_accessories/img78.jpg";
+import img79 from "../assets/premium_accessories/img79.jpg";
+
 const MasonryGallery = () => {
   const images = [
     img1,
@@ -112,6 +139,32 @@ const MasonryGallery = () => {
     img51,
     img52,
     img53,
+    img54,
+    img55,
+    img56,
+    img57,
+    img58,
+    img59,
+    img60,
+    img61,
+    img62,
+    img63,
+    img64,
+    img65,
+    img66,
+    img67,
+    img68,
+    img69,
+    img70,
+    img71,
+    img72,
+    img73,
+    img74,
+    img75,
+    img76,
+    img77,
+    img78,
+    img79,
   ];
   const [selected, setSelected] = useState(null);
 
