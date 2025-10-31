@@ -26,7 +26,7 @@ const Navbar = () => {
                         <a href="/" className="nav-links" onClick={() => setIsOpen(false)}>Home</a>
                     </li>
                     <li className="nav-item">
-                        <a href="/cart" className="nav-links" onClick={() => setIsOpen(false)}>Products</a>
+                        <a href="/cart" className="nav-links" onClick={() => setIsOpen(false)}>Gallery</a>
                     </li>
                     <li className="nav-item">
                         <a href="/" className="nav-links" onClick={() => setIsOpen(false)}>Categories</a>

@@ -1,7 +1,7 @@
 // FeaturesList.jsx
 import React from "react";
 import "./CategorySection.css";
-import { FaTh, FaLayerGroup, FaAndroid, FaYoutube } from "react-icons/fa";
+import { FaTh, FaLayerGroup, FaAndroid, FaYoutube,FaGem ,FaCrown} from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const features = [
@@ -23,7 +23,13 @@ const features = [
     icon: <FaAndroid />,
     title: "Android Products",
     description: "Smart Android devices and accessories for your modern car.",
-    direct: "/cart",
+    direct: "/android",
+  },
+  {
+    icon: <FaCrown />,
+    title: "Premium car accessories",
+    description: "Watch detailed product reviews and installation guides.",
+    direct: "/premium",
   },
   {
     icon: <FaYoutube />,
