@@ -257,7 +257,7 @@ const PremiumProductCard = () => {
                 {/* <p className="overlay-product-price"> */}
                   {/* ₹{product.price.toFixed(2)} */}
                 {/* </p> */}
-                <button className="overlay-button">View Product</button>
+                {/* <button className="overlay-button">View Product</button> */}
               </div>
             </div>
           </div>
