@@ -15,13 +15,16 @@ const Contact = () => {
       <div className="contact-card">
         <FiMapPin className="contact-icon" />
         <h3>Office</h3>
-        <p>Location Thammanam</p>
+        <p>
+          S garage S.a.road Metro pillar number 836 Janatha in Cochin 682019
+          Vyttila  ERANAKULAM
+        </p>
         <a
-          href="https://maps.app.goo.gl/tzV84g8C7ArzmtGr6?g_st=awb "
+          href="https://maps.app.goo.gl/tzV84g8C7ArzmtGr6?g_st=awb"
           target="_blank"
           rel="noopener noreferrer"
         >
-          123 Sample St. Sydney NSW 2000 AU
+          Cochin 682019 Vyttila  ERANAKULAM
         </a>
       </div>
       <div className="contact-card">
@@ -29,8 +32,8 @@ const Contact = () => {
 
         <h3>Phone</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in ero.
+          contact the Shop support team, use the Shop contact form. For
+          questions about a specific topics{" "}
         </p>
         <a
           href="tel: +919446251263
@@ -61,14 +64,17 @@ const Contact = () => {
       <div className="contact-card">
         <FiMapPin className="contact-icon" />
         <h3>Office</h3>
-        <p>Location vyttila</p>
+        <p>
+          S garage AUTO TOUCH MAY FIRST ROAD THAMMANAM P.O THAMMANAM COCHIN
+          682032 ERANAKULAM
+        </p>
         <a
           href="https://maps.app.goo.gl/LVRJWYyHvkSmNG8fA
 "
           target="_blank"
           rel="noopener noreferrer"
         >
-          123 Sample St. Sydney NSW 2000 AU
+          THAMMANAM COCHIN 682032 ERANAKULAM
         </a>
       </div>
     </section>

@@ -15,9 +15,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-column footer-brand">
           <h3 className="footer-logo">AUTO TOUCH</h3>
-          <p className="brand-slogan">
-            QUALITY IS OUR SIGNATURE
-          </p>
+          <p className="brand-slogan">QUALITY IS OUR SIGNATURE</p>
           <div className="social-icons">
             <a
               href="https://www.facebook.com/shahul.ta.50?mibextid=ZbWKwL
@@ -82,12 +80,26 @@ const Footer = () => {
             metro Pillar No 836, S.A Road,Janatha Jn, Vyttila, Amballur,
             Ernakulam 682019
           </p>
+          <h4></h4>
+          <p>
+            S garage AUTO TOUCH MAY FIRST ROAD THAMMANAM P.O THAMMANAM COCHIN
+            682032 ERANAKULAM
+          </p>
           {/* <p> */}
-            {/* Email:{" "} */}
-            {/* <a href="mailto:info@autoaccents.com">info@autoaccents.com</a> */}
+          {/* Email:{" "} */}
+          {/* <a href="mailto:info@autoaccents.com">info@autoaccents.com</a> */}
           {/* </p> */}
           <p>
             Phone: <a href="tel:+919447151263">+91 94471 51263</a>
+          </p>
+          <p>
+            Phone: <a href="tel:+919446251263">+91 94462 51263</a>
+          </p>
+          <p>
+            Phone: <a href="tel:+919446451263">+91 94464 51263</a>
+          </p>
+          <p>
+            Phone: <a href="tel:+919249451263">+91 92494 51263</a>
           </p>
         </div>
       </div>
