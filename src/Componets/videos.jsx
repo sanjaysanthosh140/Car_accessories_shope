@@ -49,11 +49,14 @@ const VideoGrid = () => {
               </div>
               <div className="video-actions">
                 <button
-                  className="play-btn"
+                  className="play-btn youtube"
                   onClick={(e) => { e.stopPropagation(); openVideo(v.videoUrl); }}
                   aria-label={`Play ${v.title}`}
                 >
-                  ▶
+                  <svg className="yt-icon" viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <rect x="0" y="0" width="36" height="24" rx="5" ry="5" fill="#FF0000" />
+                    <path d="M14 7.5 L24 12 L14 16.5 Z" fill="#fff" />
+                  </svg>
                 </button>
               </div>
             </div>
