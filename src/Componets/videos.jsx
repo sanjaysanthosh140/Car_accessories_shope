@@ -1,238 +1,67 @@
 // components/TripleVideoSlider.jsx
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import './video.css';
-const TripleVideoSlider = () => {
-  const [flipped, setFlipped] = useState([]);
-  const sliderRefs = useRef([]);
 
-  const toggleFlip = (id) => {
-    setFlipped((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
-    );
-  };
+const videos = [
+  { id: 1, title: 'Premium Car Mats', about: 'Luxury custom-fit floor mats', thumbnail: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example1' },
+  { id: 2, title: 'All-Weather Mats', about: 'Durable weather-resistant mats', thumbnail: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example2' },
+  { id: 3, title: 'Rubber Floor Mats', about: 'Heavy-duty rubber protection', thumbnail: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example3' },
+  { id: 4, title: 'Luxury Carpet Mats', about: 'Soft, premium carpet mats', thumbnail: 'https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example4' },
+  { id: 5, title: 'Tailored Fit Sets', about: 'Perfect fit for every model', thumbnail: 'https://images.unsplash.com/photo-1563720223313-0b5b6b1d0fcb?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example5' },
+  { id: 6, title: 'Interior Styling', about: 'Upgrade your car interior', thumbnail: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example6' },
+  { id: 7, title: 'Exterior Accessories', about: 'Make your car stand out', thumbnail: 'https://images.unsplash.com/photo-1493238792000-8113da705763?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example7' },
+  { id: 8, title: 'Audio Systems', about: 'High-quality sound upgrades', thumbnail: 'https://images.unsplash.com/photo-1518441902113-7f2f7f5d7a9b?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example8' },
+  { id: 9, title: 'LED Lighting', about: 'Modern LED lighting solutions', thumbnail: 'https://images.unsplash.com/photo-1470115636492-6d2b56f91453?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example9' },
+  { id: 10, title: 'DIY Install Tips', about: 'Step-by-step installation', thumbnail: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example10' },
+  { id: 11, title: 'Maintenance Guide', about: 'Keep accessories in top shape', thumbnail: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example11' },
+  { id: 12, title: 'Pro Fitting Service', about: 'Professional fitting & advice', thumbnail: 'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=1200', videoUrl: 'https://www.youtube.com/watch?v=example12' }
+];
 
-  const videoCategories = [
-    {
-      category: 'Car Mats',
-      videos: [
-        {
-          id: 1,
-          title: 'Premium Car Mats Collection',
-          about: 'Luxury car floor mats with custom fit',
-          description: 'High-quality automotive floor protection',
-          thumbnail: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example1'
-        },
-        {
-          id: 2,
-          title: 'Custom Fit Mats',
-          about: 'Perfect fit for your vehicle model',
-          description: 'Tailored automotive floor solutions',
-          thumbnail: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example2'
-        },
-        {
-          id: 3,
-          title: 'All-Weather Protection',
-          about: 'Durable mats for any season',
-          description: 'Weather-resistant automotive flooring',
-          thumbnail: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example3'
-        },
-        {
-          id: 4,
-          title: 'Luxury Carpet Mats',
-          about: 'Premium carpet floor protection',
-          description: 'Soft and durable carpet mats',
-          thumbnail: 'https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example4'
-        },
-        {
-          id: 5,
-          title: 'Rubber Floor Mats',
-          about: 'Heavy-duty rubber protection',
-          description: 'Industrial strength floor mats',
-          thumbnail: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example5'
-        }
-      ]
-    },
-    {
-      category: 'Car Accessories',
-      videos: [
-        {
-          id: 6,
-          title: 'Interior Enhancement',
-          about: 'Upgrade your car interior',
-          description: 'Premium interior accessories collection',
-          thumbnail: 'https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example6'
-        },
-        {
-          id: 7,
-          title: 'Exterior Styling',
-          about: 'Make your car stand out',
-          description: 'Exterior enhancement accessories',
-          thumbnail: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example7'
-        },
-        {
-          id: 8,
-          title: 'Performance Parts',
-          about: 'Boost your car performance',
-          description: 'High-performance automotive parts',
-          thumbnail: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example8'
-        },
-        {
-          id: 9,
-          title: 'Lighting Solutions',
-          about: 'LED lighting for your vehicle',
-          description: 'Modern lighting accessories',
-          thumbnail: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example9'
-        },
-        {
-          id: 10,
-          title: 'Audio Systems',
-          about: 'Premium car audio solutions',
-          description: 'High-quality sound systems',
-          thumbnail: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example10'
-        }
-      ]
-    },
-    {
-      category: 'Installation Guides',
-      videos: [
-        {
-          id: 11,
-          title: 'Easy Installation Tips',
-          about: 'Step-by-step installation guide',
-          description: 'Professional installation tutorials',
-          thumbnail: 'https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example11'
-        },
-        {
-          id: 12,
-          title: 'Maintenance Guide',
-          about: 'Keep your accessories perfect',
-          description: 'Essential maintenance tips',
-          thumbnail: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example12'
-        },
-        {
-          id: 13,
-          title: 'Troubleshooting',
-          about: 'Common issues and solutions',
-          description: 'Problem-solving guides',
-          thumbnail: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example13'
-        },
-        {
-          id: 14,
-          title: 'DIY Projects',
-          about: 'Do-it-yourself installations',
-          description: 'Easy DIY car projects',
-          thumbnail: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example14'
-        },
-        {
-          id: 15,
-          title: 'Professional Tips',
-          about: 'Expert installation advice',
-          description: 'Professional techniques',
-          thumbnail: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400',
-          videoUrl: 'https://www.youtube.com/watch?v=example15'
-        }
-      ]
-    }
-  ];
-
-  useEffect(() => {
-    const autoScroll = () => {
-      sliderRefs.current.forEach((slider, index) => {
-        if (slider) {
-          const scrollHeight = slider.scrollHeight;
-          const clientHeight = slider.clientHeight;
-          const maxScroll = scrollHeight - clientHeight;
-          
-          if (maxScroll > 0) {
-            const currentScroll = slider.scrollTop;
-            const newScroll = currentScroll >= maxScroll ? 0 : currentScroll + 1;
-            slider.scrollTop = newScroll;
-          }
-        }
-      });
-    };
-
-    const interval = setInterval(autoScroll, 50);
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleVideoClick = (videoId) => {
-    window.location.href = `${videoId}`
+const VideoGrid = () => {
+  const openVideo = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
-    <section className="triple-video-slider-container">
-      <header className="triple-slider-header">
-        <h2 className="triple-slider-title">Our Video Collection</h2>
-        <p className="triple-slider-subtitle">
-          Discover our premium car accessories through detailed videos
-        </p>
-        <div className="title-underline"></div>
+    <section className="videos-section">
+      <header className="videos-header">
+        <h2 className="videos-title">Video Showcase</h2>
+        <p className="videos-subtitle">Browse our curated set of videos demonstrating products and installations.</p>
+        <div className="videos-underline" />
       </header>
 
-      <div className="triple-slider-grid">
-        {videoCategories.map((category, index) => (
-          <div key={category.category} className="slider-column" >
-            <h3 className="category-title">{category.category}</h3>
-            <div className="video-scroll-container" ref={(el) => (sliderRefs.current[index] = el)}>
-              {category.videos.map((video) => (
-                <article
-                  key={video.id}
-                  className={`video-card ${flipped.includes(video.id) ? 'flipped' : ''}`}
-                  onClick={() => toggleFlip(video.id)}
-                  style={{'--bg-image': `url(${video.thumbnail})`}}
-                  
+      <div className="videos-grid" role="list">
+        {videos.map((v) => (
+          <article
+            key={v.id}
+            className="video-card"
+            role="listitem"
+            tabIndex={0}
+            onClick={() => openVideo(v.videoUrl)}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') openVideo(v.videoUrl); }}
+            style={{ ['--bg-image']: `url(${v.thumbnail})` }}
+            aria-label={`${v.title} - ${v.about}`}
+          >
+            <div className="video-card-content">
+              <div className="video-meta">
+                <h3 className="video-title">{v.title}</h3>
+                <p className="video-about">{v.about}</p>
+              </div>
+              <div className="video-actions">
+                <button
+                  className="play-btn"
+                  onClick={(e) => { e.stopPropagation(); openVideo(v.videoUrl); }}
+                  aria-label={`Play ${v.title}`}
                 >
-                  <div className="corner-brackets">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-
-                  <div className="card-inner" onClick={()=>handleVideoClick(video.videoUrl)}>
-                    <div className="card-front">
-                      <div className="front-content">
-                        <h3 className="card-title-front">{video.title}</h3>
-                        <p className="card-about-front">{video.about}</p>
-
-                      </div>
-                    </div>
-                    <div className="card-back">
-                      <h3 className="card-title-back">{video.title}</h3>
-                      <button 
-                        className="navigation-btn"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleVideoClick(video.id);
-                        }}
-                      >
-                        Watch Video
-                      </button>
-                    </div>
-                  </div>
-                </article>
-              ))}
+                  ▶
+                </button>
+              </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
   );
 };
 
-export default TripleVideoSlider;
+export default VideoGrid;
