@@ -2,56 +2,36 @@ import React, { useState } from "react";
 import "./Displayset.css";
 
 // Import your seat cover images.
-import red_seat from "../assets/red_black.png";
-import spl_camel from "../assets/Spl_Camel_black.png";
-import lite_brown from "../assets/lite_brown_black.png";
-import beige_black from "../assets/Beige_black.png";
-import spi_b_scot from "../assets/spl_b.scot_red.png";
-import fawn_black from "../assets/fawn_balck.png";
-import maroon_black from "../assets/maroon_black.png";
-import l_tan from "../assets/L_tan_black.png";
-import white from "../assets/white_black.png";
-import butter_scot from "../assets/Butter_scotch_black.png";
-import lite_bigen from "../assets/light_beige.png";
-import blue_black from "../assets/balck_blue.png";
-import b_ten_red from "../assets/B_Tan_red.png";
-import blacke_red from "../assets/balck_red.png";
-import gray_black from "../assets/gray_black.png";
-import camel_black from "../assets/camel_black.png";
-import lite_gray from "../assets/lite_gray_camel.png";
-import off_white from "../assets/off_white.png";
-import dark_brown_white from "../assets/dark_brown_white.png";
-import royal_begin from "../assets/royal_begin.png";
-import sliver_brown from "../assets/sliver_brown.png";
-import Mushroom from "../assets/Mushroom_gray.png";
+import red_seat from "../assets/red_black.webp";
+import spl_camel from "../assets/Spl_Camel_black.webp";
+import lite_brown from "../assets/lite_brown_black.webp";
+import beige_black from "../assets/Beige_black.webp";
+import spi_b_scot from "../assets/spl_b.scot_red.webp";
+import fawn_black from "../assets/fawn_balck.webp";
+import maroon_black from "../assets/maroon_black.webp";
+import l_tan from "../assets/L_tan_black.webp";
+import white from "../assets/white_black.webp";
+//import white from "../assets/white_blackwp.webp";
+import butter_scot from "../assets/Butter_scotch_black.webp";
+import lite_bigen from "../assets/light_beige.webp";
+import blue_black from "../assets/balck_blue.webp";
+import b_ten_red from "../assets/B_Tan_red.webp";
+import blacke_red from "../assets/balck_red.webp";
+import gray_black from "../assets/gray_black.webp";
+import camel_black from "../assets/camel_black.webp";
+import lite_gray from "../assets/lite_gray_camel.webp";
+import off_white from "../assets/off_white.webp";
+import dark_brown_white from "../assets/dark_brown_white.webp";
+import royal_begin from "../assets/royal_begin.webp";
+import sliver_brown from "../assets/sliver_brown.webp";
+import Mushroom from "../assets/Mushroom_gray.webp";
 
-import Terracotta from "../assets/seats_1.jpg";
-import Saddle_Tan from "../assets/seats_2.jpg";
-import Burnt_Orange from "../assets/seats_3.jpg";
-import Bright_Fuchsia from "../assets/seats_4.jpg";
-import Deep_Magenta from "../assets/seats_5.jpg";
-import Warm_Beige from "../assets/seats_6.jpg";
-import Bright_Fuchsia_2 from "../assets/seats_7.jpg";
-import Terracotta_2 from "../assets/seats_8.jpg";
-import Jet_Black from "../assets/seats_9.jpg";
-import Light_Cream from "../assets/seats_10.jpg";
-import Russet_Brown from "../assets/seats_11.jpg";
-import Tangerine_Orange from "../assets/seats_12.jpg";
-import Pumpkin_Orange from "../assets/seats_13.jpg";
-import Charcoal_Black from "../assets/seats_14.jpg";
 
 const colors = [
   { name: "Black", hex: "#1a1a1a", image: blacke_red },
   { name: "Red", hex: "#c0392b", image: red_seat },
   { name: "Gray", hex: "#7f8c8d", image: gray_black },
   { name: "Camel", hex: "#C19A6B", image: camel_black },
-  { name: "Terracotta", hex: "#cd5c41", image: Terracotta },
-  { name: "Saddle Tan", hex: "#b6754b", image: Saddle_Tan },
-  { name: "Burnt Orange", hex: "#c96939", image: Burnt_Orange },
-  { name: "Bright Fuchsia_1", hex: "#e8338f", image: Bright_Fuchsia },
-  { name: "Deep Magenta", hex: "#d22d76", image: Deep_Magenta },
-  { name: "Warm Beige", hex: "#c9b699", image: Warm_Beige },
-  { name: "Bright Fuchsia_2", hex: "#e8338f", image: Bright_Fuchsia_2 },
   { name: "Spl_Came", hex: "#B88A62", image: spl_camel },
   { name: "Light Browin", hex: "#B59982", image: lite_brown },
   { name: "Beige", hex: "#F5F5DC", image: beige_black },
@@ -71,13 +51,6 @@ const colors = [
   { name: "Silver", hex: "#C0C0C0", image: sliver_brown },
   { name: "Mushroom", hex: "#BFAEA0", image: Mushroom },
   ////
-  { name: "Terracotta", hex: "#cd5c41", image: Terracotta_2 },
-  { name: "Jet Black", hex: "#1e1e1e", image: Jet_Black },
-  { name: "Light Cream", hex: "#e1d3b7", image: Light_Cream },
-  { name: "Russet Brown", hex: "#964835", image: Russet_Brown },
-  { name: "Tangerine Orange", hex: "#e07f41", image: Tangerine_Orange },
-  { name: "Pumpkin Orange", hex: "#e07a3c", image: Pumpkin_Orange },
-  { name: "Charcoal Black", hex: "#1a1d21", image: Charcoal_Black },
 ];
 
 // ...existing imports...

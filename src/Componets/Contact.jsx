@@ -5,12 +5,6 @@ import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 const Contact = () => {
   return (
     <section className="contact-container">
-      {/* <div className="contact-card"> */}
-      {/* <FiMail className="contact-icon" /> */}
-      {/* <h3>Email</h3> */}
-      {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p> */}
-      {/* <a href="mailto:email@example.com">email@example.com</a> */}
-      {/* </div> */}
 
       <div className="contact-card">
         <FiMapPin className="contact-icon" />
