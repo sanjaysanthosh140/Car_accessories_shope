@@ -7,7 +7,7 @@ import thumbnail_4 from "../assets/yt_thump_nail/car_img_4.webp";
 import thumbnail_5 from "../assets/yt_thump_nail/yt_car_2.webp";
 import thumbnail_6 from "../assets/yt_thump_nail/yt_car_img_6.webp";
 import thumbnail_7 from "../assets/yt_thump_nail/yt_car.webp";
-import thumbnail_8 from "../assets/yt_thump_nail/car_img_4.webp";
+import thumbnail_8 from "../assets/yt_thump_nail/yt_stereo_android..webp";
 import thumbnail_9 from "../assets/yt_thump_nail/car_img_3.webp";
 import thumbnail_10 from "../assets/yt_thump_nail/car_7_yt.webp";
 import thumbnail_11 from "../assets/yt_thump_nail/audi_integor_work_yt.webp";
@@ -15,98 +15,87 @@ import thumbnail_12 from "../assets/yt_thump_nail/yt_stereo_android.webp";
 const videos = [
   {
     id: 1,
-    title: "Premium Car Mats",
+    title: "About as",
     about: "Luxury custom-fit floor mats",
-    thumbnail: thumbnail_1,
-    videoUrl: "https://www.youtube.com/watch?v=example1",
+    thumbnail: thumbnail_5,
+    videoUrl: "https://youtube.com/shorts/m4YJrUWE0nI?si=a6vIdZ8jMn6IpX1U",
   },
   {
     id: 2,
-    title: "All-Weather Mats",
+    title: "Android",
     about: "Durable weather-resistant mats",
-    thumbnail:
-      thumbnail_2,
-    videoUrl: "https://www.youtube.com/watch?v=example2",
+    thumbnail: thumbnail_10,
+    videoUrl: "https://youtu.be/N5mixFGD-Bo?si=rPnNXL8mWVQApXqX",
   },
   {
     id: 3,
-    title: "Rubber Floor Mats",
+    title: "360 camara android stereo",
     about: "Heavy-duty rubber protection",
-    thumbnail:
-      thumbnail_3,
-    videoUrl: "https://www.youtube.com/watch?v=example3",
+    thumbnail: thumbnail_3,
+    videoUrl: "https://youtu.be/nkOubEjyjHY?si=fWvMqwz8Nqvzzbbd",
   },
   {
     id: 4,
-    title: "Luxury Carpet Mats",
+    title: "7D MATS",
     about: "Soft, premium carpet mats",
-    thumbnail:
-      thumbnail_4,
-    videoUrl: "https://www.youtube.com/watch?v=example4",
+    thumbnail: thumbnail_12,
+    videoUrl: "https://youtu.be/LP6tykOscjU?si=An0O2ZERm3R8mMXI",
   },
   {
     id: 5,
-    title: "Tailored Fit Sets",
+    title: "A/C WORK",
     about: "Perfect fit for every model",
-    thumbnail:
-      thumbnail_5,
-    videoUrl: "https://www.youtube.com/watch?v=example5",
+    thumbnail: thumbnail_1,
+    videoUrl: "https://youtu.be/vRW9q0Evu_8?si=qyodYi2voBAikkUg",
   },
   {
     id: 6,
-    title: "Interior Styling",
+    title: "7D MAT MANUFACTURING",
     about: "Upgrade your car interior",
-    thumbnail:
-      thumbnail_6,
-    videoUrl: "https://www.youtube.com/watch?v=example6",
+    thumbnail: thumbnail_6,
+    videoUrl: "https://youtu.be/LP6tykOscjU?si=An0O2ZERm3R8mMXI",
   },
   {
     id: 7,
-    title: "Exterior Accessories",
+    title: "Under seat sub",
     about: "Make your car stand out",
-    thumbnail:
-      thumbnail_7,
-    videoUrl: "https://www.youtube.com/watch?v=example7",
+    thumbnail: thumbnail_7,
+    videoUrl: ":https://youtu.be/GkhCbbOCYu4?si=Ng9r90jdzV57-gaY",
   },
   {
     id: 8,
-    title: "Audio Systems",
+    title: "Android stereo",
     about: "High-quality sound upgrades",
-    thumbnail:
-      thumbnail_8,
-    videoUrl: "https://www.youtube.com/watch?v=example8",
+    thumbnail: thumbnail_8,
+    videoUrl: "https://youtu.be/57YS8nBhKEk?si=_stYKRH9coILLKuw",
   },
   {
     id: 9,
-    title: "LED Lighting",
+    title: "Get Attractive Offers and Discounts",
     about: "Modern LED lighting solutions",
-    thumbnail:
-      thumbnail_9,
-    videoUrl: "https://www.youtube.com/watch?v=example9",
+    thumbnail: thumbnail_9,
+    videoUrl: "https://youtu.be/5jyWulZGc5I?si=fyuMDBLumymdFeZP",
   },
   {
     id: 10,
-    title: "DIY Install Tips",
+    title: "spoiler caraccessories",
     about: "Step-by-step installation",
-    thumbnail:
-      thumbnail_10,
-    videoUrl: "https://www.youtube.com/watch?v=example10",
+    thumbnail: thumbnail_2,
+    videoUrl: "https://youtu.be/7bebOveOk7E?si=B1rm-zN5zTuq_6He",
   },
   {
     id: 11,
-    title: "Maintenance Guide",
+    title: "Seat Covers",
     about: "Keep accessories in top shape",
-    thumbnail:
-      thumbnail_11,
-    videoUrl: "https://www.youtube.com/watch?v=example11",
+    thumbnail: thumbnail_11,
+    videoUrl: "https://youtube.com/shorts/m4YJrUWE0nI?si=a6vIdZ8jMn6IpX1U",
   },
   {
     id: 12,
-    title: "Pro Fitting Service",
+    title: "Car 360 degree camera",
     about: "Professional fitting & advice",
-    thumbnail:
-      thumbnail_12,
-    videoUrl: "https://www.youtube.com/watch?v=example12",
+    thumbnail: thumbnail_4,
+    videoUrl: "https://youtu.be/kCBJ5MsOTjc?si=k2JgkCyBuG65Yqe6 ",
   },
 ];
 
@@ -143,7 +132,7 @@ const VideoGrid = () => {
             <div className="video-card-content">
               <div className="video-meta">
                 <h3 className="video-title">{v.title}</h3>
-                <p className="video-about">{v.about}</p>
+                {/* <p className="video-about">{v.about}</p> */}
               </div>
               <div className="video-actions">
                 <button
