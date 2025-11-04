@@ -77,6 +77,36 @@
   border-radius: 5px;
   position: relative;
 }
+/* When using <button> elements for navigation, reset default button styles
+   so they look like links and keep the original navbar appearance */
+.nav-links {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Accessible focus state for keyboard users */
+.nav-links:focus {
+  /* Remove focus outline for mouse clicks to avoid visible border on click */
+  outline: none;
+}
+
+/* Show an accessible focus outline only for keyboard users */
+.nav-links:focus-visible {
+  outline: 2px solid rgba(0, 230, 118, 0.25);
+  outline-offset: 2px;
+}
+
+/* Remove Firefox inner focus border for buttons */
+.nav-links::-moz-focus-inner {
+  border: 0;
+}
+
+/* Ensure active state doesn't show unwanted borders */
+.nav-links:active {
+  outline: none;
+}
 
 /* Remove all hover effects and cursor pointer */
 .nav-links:hover {
@@ -108,6 +138,10 @@
 }
 
 /* Hamburger menu animation */
+/* Make logo clickable and show pointer cursor when it's a div acting as a button */
+.navbar-logo {
+  cursor: pointer;
+}
 .menu-icon.open .bar1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
