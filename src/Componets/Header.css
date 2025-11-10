@@ -156,7 +156,46 @@
 
 /* Media Queries for Responsive Design */
 
-/* Large devices (desktops, 1024px and up) */
+/* 4K and Large Screens */
+@media screen and (min-width: 2560px) {
+  .navbar-container {
+    max-width: 1800px;
+    padding: 0 40px;
+  }
+  
+  .nav-menu {
+    gap: 3rem;
+  }
+
+  .nav-links {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .logo-image {
+    height: 75px;
+    width: 75px;
+  }
+}
+
+/* Large devices (desktops, 1024px to 1440px) */
+@media screen and (max-width: 1440px) {
+  .navbar-container {
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    gap: 2rem;
+  }
+
+  .nav-links {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Medium-Large devices (smaller desktops, 1024px and up) */
 @media screen and (max-width: 1024px) {
   .navbar-container {
     padding: 0 15px;
@@ -172,7 +211,7 @@
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* iPads and Tablets (768px to 1023px) */
 @media screen and (max-width: 768px) {
   .navbar {
     height: 70px;
@@ -197,11 +236,13 @@
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     width: 100%;
+    height: calc(100vh - 70px);
     text-align: center;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
     padding: 2rem 0;
     gap: 0;
+    overflow-y: auto;
   }
 
   .nav-menu.active {
@@ -211,6 +252,15 @@
   .nav-item {
     height: auto;
     margin: 1rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-menu.active .nav-item {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
   }
 
   .nav-links {
@@ -220,10 +270,12 @@
     width: 100%;
     justify-content: center;
     border-radius: 0;
+    transition: all 0.3s ease;
   }
 
   .nav-links:hover {
     color: #00e676;
+    background: rgba(0, 230, 118, 0.1);
   }
 
   .menu-icon {
@@ -231,24 +283,26 @@
   }
 }
 
-/* Small devices (landscape phones, 576px and up) */
+/* Small devices (landscape phones, 576px to 767px) */
 @media screen and (max-width: 576px) {
   .navbar {
     height: 65px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
   }
 
   .navbar-container {
-    padding: 0 10px;
+    padding: 0 12px;
   }
 
   .logo-image {
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
+    border-width: 2px;
   }
 
   .nav-menu {
     top: 65px;
+    height: calc(100vh - 65px);
     padding: 1.5rem 0;
   }
 
@@ -268,26 +322,36 @@
     height: 2.5px;
     margin: 2.5px 0;
   }
+  
+  /* Improve touch targets for mobile */
+  .nav-links {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* Extra small devices (phones, 480px and down) */
 @media screen and (max-width: 480px) {
   .navbar {
     height: 60px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
   }
 
   .navbar-container {
-    padding: 0 8px;
+    padding: 0 10px;
   }
 
   .logo-image {
-    height: 45px;
-    width: 45px;
+    height: 42px;
+    width: 42px;
+    border-width: 2px;
   }
 
   .nav-menu {
     top: 60px;
+    height: calc(100vh - 60px);
     padding: 1rem 0;
   }
 
@@ -298,6 +362,7 @@
   .nav-links {
     font-size: 0.95rem;
     padding: 0.7rem 1.2rem;
+    min-height: 42px;
   }
 
   .bar1,
@@ -309,22 +374,83 @@
   }
 }
 
+/* Small phones (320px and down) */
+@media screen and (max-width: 320px) {
+  .navbar {
+    height: 55px;
+  }
+
+  .logo-image {
+    height: 38px;
+    width: 38px;
+  }
+
+  .nav-menu {
+    top: 55px;
+    height: calc(100vh - 55px);
+  }
+
+  .nav-links {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
 /* Landscape orientation adjustments */
 @media screen and (max-height: 500px) and (orientation: landscape) {
   .navbar {
     height: 60px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
   }
 
   .nav-menu {
     top: 60px;
-    padding: 1rem 0;
-    max-height: 80vh;
+    padding: 0.8rem 0;
+    height: calc(100vh - 60px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
     overflow-y: auto;
   }
 
   .nav-item {
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
+  }
+
+  .nav-links {
+    padding: 0.6rem 1rem;
+    min-height: 40px;
+  }
+}
+
+/* Fold devices and narrow screens */
+@media screen and (max-width: 280px) {
+  .navbar {
+    height: 50px;
+  }
+
+  .logo-image {
+    height: 35px;
+    width: 35px;
+  }
+
+  .nav-menu {
+    top: 50px;
+    height: calc(100vh - 50px);
+  }
+
+  .nav-links {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+  .navbar {
+    padding-left: max(15px, env(safe-area-inset-left));
+    padding-right: max(15px, env(safe-area-inset-right));
+    padding-top: max(0px, env(safe-area-inset-top));
   }
 }
 

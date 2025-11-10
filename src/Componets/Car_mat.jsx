@@ -115,7 +115,7 @@ const CarMatDisplay = () => {
     <section className="car-mat-display-section">
       <div className="content-wrapper">
         <header className="display-header">
-          <h1>Premium Car Seat Covers</h1>
+          <h1>Premium Custom 4D Mats</h1>
           <p>Customize your car's interior with our premium selection</p>
         </header>
 

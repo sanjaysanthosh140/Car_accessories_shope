@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Componets/Header";
 import Hero from "./Componets/Hero";
 import CategorySection from "./Componets/CategorySection";
@@ -16,27 +16,27 @@ import MasonryGallery from "./Componets/Premium_accessories";
 
 function App() {
   return (
-    <>
+    <div>
+    
       <BrowserRouter>
-        <Header />
-        <Hero />
-        <Routes>
-          <Route path="/" element={<CategorySection />} />
-          <Route path="/seats" element={<CarSeatDisplay/>} />
-          <Route path="/mat" element={<CarMatDisplay/>} />
-          <Route path='/android' element={<ProductCard/>}/>
-          <Route path='/cart' element={<Gallery/>}/>
-          <Route path='/contact' element={<Contact/>}/>
-          <Route path='/about' element={<VideoSlider/>}/>
-          <Route path='/videos' element={<VideoSlider/>}/>
-          <Route path='/premium' element={<MasonryGallery/>}/>  
-        </Routes>
-        
-        <Locations />
-        {/* <Contact /> */}
-        <Footer />
-      </BrowserRouter>
-    </>
+          <Header />
+          <Hero />
+          <Routes>
+            <Route path="/" element={<CategorySection />} />
+            <Route path="/seats" element={<CarSeatDisplay/>} />
+            <Route path="/mat" element={<CarMatDisplay/>} />
+            <Route path='/android' element={<ProductCard/>}/>
+            <Route path='/cart' element={<Gallery/>}/>
+            <Route path='/contact' element={<Contact/>}/>
+            <Route path='/about' element={<VideoSlider/>}/>
+            <Route path='/videos' element={<VideoSlider/>}/>
+            <Route path='/premium' element={<MasonryGallery/>}/>  
+          </Routes>
+          <Locations />
+          <Footer />
+        </BrowserRouter>
+      </div>
+  
   );
 }
 
