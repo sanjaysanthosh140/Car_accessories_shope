@@ -1,7 +1,7 @@
 // OurLocations.jsx
 import React from "react";
 import "./Location.css";
-import { FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa"; 
+import { FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa";
 // Google Maps embed URLs for each location
 // Replace with actual Google Maps embed URLs for your specific locations.
 // You can get these by going to Google Maps, finding your location, clicking 'Share', then 'Embed a map'.
@@ -9,7 +9,8 @@ const locations = [
   {
     id: 1,
     name: "Location Thammanam",
-    address: "123 Grand Ave, Metropolis, CA 90210",
+    address:
+      "S garage  AUTO TOUCH  MAY FIRST ROAD  THAMMANAM  COCHIN 682032 ERANAKULAM",
     phone: "+91 9447151263",
     hours: "Mon-Sat: 9 AM - 7 PM",
     mapEmbedUrl:
@@ -19,13 +20,25 @@ const locations = [
   {
     id: 2,
     name: "Location  vyttila ",
-    address: "Your Address Here", // (Optional: add a human-readable address)
+    address:
+      "S garage S.a.road Metro pillar number 836 Janatha jn Cochin 682019 Vyttila  ERANAKULAM", // (Optional: add a human-readable address)
     phone: "+91 9249451263", // Update if needed
     hours: "Mon–Fri: 10 AM – 6 PM",
     mapEmbedUrl:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.59090050857!2d76.3115864!3d9.967954200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08736cd67f6e91%3A0x5a6c87ba01cd20db!2sS%20Garage%20car%20accessories%20shop!5e0!3m2!1sen!2sin!4v1754729139902!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"',
     directionsLink: "https://maps.app.goo.gl/tzV84g8C7ArzmtGr6?g_st=awb",
   },
+
+  // {
+    // id: 2,
+    // name: "Location Dubai",
+    // address: "2 13 St - Al Quoz - Al Quoz Industrial Area 2 - Dubai", // (Optional: add a human-readable address)
+    // phone: "+91 9249451263", // Update if needed
+    // hours: "Mon–Fri: 10 AM – 6 PM",
+    // mapEmbedUrl:
+      // 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.59090050857!2d76.3115864!3d9.967954200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08736cd67f6e91%3A0x5a6c87ba01cd20db!2sS%20Garage%20car%20accessories%20shop!5e0!3m2!1sen!2sin!4v1754729139902!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"',
+    // directionsLink: "",
+  // },
 ];
 
 const OurLocations = () => {

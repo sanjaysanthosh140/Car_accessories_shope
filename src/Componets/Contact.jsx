@@ -1,7 +1,7 @@
 import React from "react";
 import "./Contact.css";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
-import { FaRupeeSign } from "react-icons/fa";
+import { FaMapPin, FaRupeeSign } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -40,9 +40,10 @@ const Contact = () => {
           </a>
         </div>
       </div>
+
       <div className="contact-card" data-type="location">
         <FiMapPin className="contact-icon" aria-hidden="true" />
-        <h3>Vyttila Office</h3>
+        <h3>Office Location India</h3>
         <p>
           S garage S.a.road Metro pillar number 836 Janatha in Cochin 682019
           Vyttila ERANAKULAM
@@ -61,7 +62,7 @@ const Contact = () => {
 
       <div className="contact-card">
         <FiMapPin className="contact-icon" />
-        <h3>Office</h3>
+        <h3>Office Location India </h3>
         <p>
           S garage AUTO TOUCH MAY FIRST ROAD THAMMANAM P.O THAMMANAM COCHIN
           682032 ERANAKULAM
@@ -74,6 +75,14 @@ const Contact = () => {
         >
           THAMMANAM COCHIN 682032 ERANAKULAM
         </a>
+      </div>
+
+      <div className="contact-card">
+        <FaMapPin className="contact-icon" />
+        <h3>Office Location Dubai</h3>
+        <p>
+          2 13 St - Al Quoz - Al Quoz Industrial Area 2 - Dubai
+        </p>
       </div>
 
       <div className="contact-card">

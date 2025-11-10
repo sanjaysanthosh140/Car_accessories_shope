@@ -85,6 +85,10 @@ const Footer = () => {
             S garage AUTO TOUCH MAY FIRST ROAD THAMMANAM P.O THAMMANAM COCHIN
             682032 ERANAKULAM
           </p>
+          <h4></h4>
+          <p>
+            2 13 St - Al Quoz - Al Quoz Industrial Area 2 - Dubai
+          </p>
           {/* <p> */}
           {/* Email:{" "} */}
           {/* <a href="mailto:info@autoaccents.com">info@autoaccents.com</a> */}

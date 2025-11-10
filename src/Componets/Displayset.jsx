@@ -70,7 +70,7 @@ const CarMatDisplay = () => {
       <div className="content-wrapper">
         <header className="display-header">
           <h1>Premium Car Seat Covers</h1>
-          <p>Customize your car's interior with our premium selection</p>
+          <p>Customize your car's Seat's with our premium selection</p>
         </header>
 
         <div className="display-layout">
