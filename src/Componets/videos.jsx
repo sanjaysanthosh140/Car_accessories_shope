@@ -60,7 +60,7 @@ const videos = [
     title: "Under seat sub",
     about: "Make your car stand out",
     thumbnail: thumbnail_7,
-    videoUrl: ":https://youtu.be/GkhCbbOCYu4?si=Ng9r90jdzV57-gaY",
+    videoUrl: "https://youtu.be/GkhCbbOCYu4?si=Ng9r90jdzV57-gaY",
   },
   {
     id: 8,
