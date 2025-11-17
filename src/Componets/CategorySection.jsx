@@ -1,7 +1,7 @@
 // FeaturesList.jsx
 import React from "react";
 import "./CategorySection.css";
-import { FaTh, FaLayerGroup, FaAndroid, FaYoutube,FaGem ,FaCrown} from "react-icons/fa";
+import { FaTh, FaLayerGroup, FaAndroid, FaYoutube,FaGem ,FaCrown, FaChair, FaGamepad, FaWind} from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const features = [
@@ -36,6 +36,24 @@ const features = [
     title: "Video Reviews",
     description: "Watch detailed product reviews and installation guides.",
     direct: "/videos",
+  },
+  {
+    icon: <FaChair />,
+    title: "Car Seat Display",
+    description: "Premium seating solutions with custom upholstery and heating options for ultimate comfort.",
+    direct: "/cart",
+  },
+  {
+    icon: <FaGamepad />,
+    title: "Full Body Controller",
+    description: "Advanced in-car entertainment systems with touchscreen controls and steering wheel integration.",
+    direct: "/",
+  },
+  {
+    icon: <FaWind />,
+    title: "AC Seats",
+    description: "Climate-controlled seats with cooling and heating functions for all-season comfort and support.",
+    direct: "/",
   },
 ];
 
