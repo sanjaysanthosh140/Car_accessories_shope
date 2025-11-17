@@ -62,7 +62,7 @@ const Contact = () => {
 
       <div className="contact-card">
         <FiMapPin className="contact-icon" />
-        <h3>Office Location India </h3>
+        <h3>Office Location kerala </h3>
         <p>
           S garage AUTO TOUCH MAY FIRST ROAD THAMMANAM P.O THAMMANAM COCHIN
           682032 ERANAKULAM
@@ -78,11 +78,20 @@ const Contact = () => {
       </div>
 
       <div className="contact-card">
+        <FiMapPin className="contact-icon" />
+        <h3>Office Location kerala </h3>
+        <p>SS Manufacturing Mompany Muthoor Thiruvalla</p>
+      </div>
+
+      <div className="contact-card">
+        <FiMapPin className="contact-icon" />
+        <h3>Office Location kerala</h3>
+        <p>Zam Zam Car Care Eranakulam Vytilla</p>
+      </div>
+      <div className="contact-card">
         <FaMapPin className="contact-icon" />
         <h3>Office Location Dubai</h3>
-        <p>
-          2 13 St - Al Quoz - Al Quoz Industrial Area 2 - Dubai
-        </p>
+        <p>2 13 St - Al Quoz - Al Quoz Industrial Area 2 - Dubai</p>
       </div>
 
       <div className="contact-card">
