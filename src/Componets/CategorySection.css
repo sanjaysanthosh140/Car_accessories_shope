@@ -82,6 +82,15 @@
   justify-content: center;
 }
 
+/* Ensure svg icons inherit the CSS color and use it as fill */
+.feature-icon svg,
+.feature-svg {
+  color: inherit;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+}
+
 .feature-card:hover .feature-icon {
   transform: rotateY(360deg) scale(1.1);
 }

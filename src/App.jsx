@@ -11,6 +11,7 @@ import ProductCard from "./Componets/Carts";
 import VideoSlider from "./Componets/videos";
 import Gallery from "./Componets/Work_showcase";
 import MasonryGallery from "./Componets/Premium_accessories";
+import Car_4D_mats from "./Componets/Car_4D_mats";
 // import Gallery from "./Componets/gallary_img";
 //import ClientShowcase from "./Componets/gallary_img"
 
@@ -31,6 +32,7 @@ function App() {
             <Route path='/about' element={<VideoSlider/>}/>
             <Route path='/videos' element={<VideoSlider/>}/>
             <Route path='/premium' element={<MasonryGallery/>}/>  
+            <Route path="/4D_mats" element={<Car_4D_mats/>}/>
           </Routes>
           <Locations />
           <Footer />
