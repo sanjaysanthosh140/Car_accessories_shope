@@ -11,6 +11,8 @@ import {
   FaChair,
   FaGamepad,
   FaWind,
+  FaCouch,
+  FaBorderAll,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -37,10 +39,10 @@ const features = [
     direct: "/mat",
   },
   {
-    icon: <FaLayerGroup className="feature-svg" />,
-    title: "Car Floor Mats",
+    icon: <FaBorderAll className="feature-svg" />,
+    title: "Flooring — 4D, 7D & Vinyl",
     description:
-      "Durable and waterproof car mats to protect your vehicle's interior.",
+      "Explore 4D and 7D mats plus vinyl flooring in one place. Durable, easy to clean, and designed to fit your car perfectly.",
     direct: "/4D_mats",
   },
   {
