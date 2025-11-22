@@ -40,7 +40,7 @@ const features = [
   },
   {
     icon: <FaBorderAll className="feature-svg" />,
-    title: "Flooring — 4D, 7D & Vinyl",
+    title: "Flooring — 5D, 7D & Vinyl",
     description:
       "Explore 4D and 7D mats plus vinyl flooring in one place. Durable, easy to clean, and designed to fit your car perfectly.",
     direct: "/4D_mats",

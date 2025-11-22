@@ -12,6 +12,9 @@ import VideoSlider from "./Componets/videos";
 import Gallery from "./Componets/Work_showcase";
 import MasonryGallery from "./Componets/Premium_accessories";
 import Car_4D_mats from "./Componets/Car_4D_mats";
+import Mats5D from "./Componets/5D_mats";
+import Mats7D from "./Componets/7D_mats";
+import VinylFlooring from "./Componets/Vinyl_flooring";
 // import Gallery from "./Componets/gallary_img";
 //import ClientShowcase from "./Componets/gallary_img"
 
@@ -33,6 +36,9 @@ function App() {
             <Route path='/videos' element={<VideoSlider/>}/>
             <Route path='/premium' element={<MasonryGallery/>}/>  
             <Route path="/4D_mats" element={<Car_4D_mats/>}/>
+            <Route path="/5d-mats" element={<Mats5D/>} />
+            <Route path="/7d-mats" element={<Mats7D/>} />
+            <Route path="/vinyl-flooring" element={<VinylFlooring/>} />
           </Routes>
           <Locations />
           <Footer />
