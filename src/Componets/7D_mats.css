@@ -1,3 +1,133 @@
+/* Glass card with glowing edge brackets for gallery images */
+.gallery-page {
+	min-height: 100vh;
+	background: linear-gradient(180deg, #0b0d10 0%, #111315 100%);
+	color: #fff;
+	padding: 48px 20px;
+	box-sizing: border-box;
+}
+
+.gallery-grid {
+	width: 100%;
+	max-width: 1400px;
+	display: grid;
+	gap: 2.5rem;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 0 1.5rem;
+	box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+	.gallery-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+}
+@media (max-width: 768px) {
+	.gallery-grid {
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
+		padding: 0 1rem;
+	}
+	.card {
+		height: 250px;
+	}
+}
+@media (max-width: 480px) {
+	.gallery-grid {
+		gap: 2rem;
+	}
+	.card {
+		height: 220px;
+	}
+}
+
+.card {
+	position: relative;
+	height: 280px;
+	cursor: pointer;
+	perspective: 1500px;
+	transition: transform 0.4s ease;
+	border-radius: 18px;
+	overflow: hidden;
+	box-shadow: 0 12px 40px rgba(2,6,23,0.7), 0 1.5px 8px rgba(255,255,255,0.08);
+	border: 1.5px solid rgba(255,255,255,0.13);
+	background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(15,23,42,0.82) 100%);
+	backdrop-filter: blur(18px) saturate(140%) brightness(1.08);
+	-webkit-backdrop-filter: blur(18px) saturate(140%) brightness(1.08);
+}
+.card:hover {
+	transform: translateY(-6px);
+}
+.cornerBrackets span {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-color: #c0c0c0;
+	border-style: solid;
+	opacity: 0;
+	transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.4s ease;
+}
+.cornerBrackets span:nth-child(1) {
+	top: -8px;
+	left: -8px;
+	border-width: 2px 0 0 2px;
+	transform: translate(10px, 10px);
+}
+.cornerBrackets span:nth-child(2) {
+	top: -8px;
+	right: -8px;
+	border-width: 2px 2px 0 0;
+	transform: translate(-10px, 10px);
+}
+.cornerBrackets span:nth-child(3) {
+	bottom: -8px;
+	left: -8px;
+	border-width: 0 0 2px 2px;
+	transform: translate(10px, -10px);
+}
+.cornerBrackets span:nth-child(4) {
+	bottom: -8px;
+	right: -8px;
+	border-width: 0 2px 2px 0;
+	transform: translate(-10px, -10px);
+}
+.card:hover .cornerBrackets span {
+	opacity: 0.6;
+	transform: translate(0, 0);
+}
+.cardImageWrap {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(120deg, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.18) 100%);
+	border-radius: 16px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+}
+.cardImageWrap img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 14px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.18), 0 0.5px 2px rgba(255,255,255,0.08);
+	transition: transform 0.4s, box-shadow 0.4s;
+	filter: brightness(1.08) saturate(1.12);
+}
+.card:hover .cardImageWrap img {
+	transform: scale(1.06) translateY(-3px);
+	box-shadow: 0 8px 32px rgba(2,6,23,0.18), 0 2px 12px rgba(255,255,255,0.12);
+}
+.card::after {
+	content: '';
+	position: absolute;
+	left: 0; right: 0; bottom: -38%; height: 60%;
+	background: linear-gradient(180deg, rgba(255,255,255,0.13), rgba(255,255,255,0.02), rgba(255,255,255,0));
+	transform: skewY(-3deg) scaleY(-1);
+	opacity: 0.22;
+	pointer-events: none;
+}
 /* Glass-style gallery card for 7D mats (exact same styles as 5D) */
 .gallery-page {
 	min-height: 100vh;

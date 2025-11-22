@@ -38,42 +38,24 @@ const ALL_IMAGES = [
 	img21,img22,img23,img24,img25,img26,img27,img28,img29,img30
 ];
 
-export default function Mats7D(){
-	const initial = useMemo(() => ALL_IMAGES.slice(), []);
-	const [cardImages, setCardImages] = useState(initial);
-	const [flipping, setFlipping] = useState(() => new Array(initial.length).fill(false));
-
-	const handleClick = (idx) => {
-		setFlipping((s) => { const ns = s.slice(); ns[idx] = true; return ns; });
-
-		setTimeout(() => {
-			setCardImages((imgs) => {
-				const current = imgs[idx];
-				const pos = ALL_IMAGES.indexOf(current);
-				const next = ALL_IMAGES[(pos + 1) % ALL_IMAGES.length];
-				const copy = imgs.slice();
-				copy[idx] = next;
-				return copy;
-			});
-
-			setTimeout(() => {
-				setFlipping((s) => { const ns = s.slice(); ns[idx] = false; return ns; });
-			}, 260);
-		}, 160);
-	};
-
+export default function Mats7D() {
 	return (
 		<div className="gallery-page">
 			<div className="gallery-grid">
-				{cardImages.map((src, idx)=> (
-					<article key={idx} className={`glass-card image-only ${flipping[idx] ? 'flipping' : ''}`} onClick={() => handleClick(idx)} role="button" tabIndex={0} onKeyDown={(e)=> e.key==="Enter" && handleClick(idx)} aria-label={`show next image ${idx + 1}`}>
-						<div className="glass-image-wrap">
-							<img src={src} alt={`7D mat ${idx + 1}`} onError={(e) => { e.currentTarget.style.opacity = 0.12; e.currentTarget.nextSibling.style.display='flex' }} />
-							<div className="no-image">Image not found<br/>{src}</div>
+				{ALL_IMAGES.map((src, idx) => (
+					<div key={idx} className="card">
+						<div className="cornerBrackets">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
-					</article>
+						<div className="cardImageWrap">
+							<img src={src} alt={`7D mat ${idx + 1}`} loading="lazy" />
+						</div>
+					</div>
 				))}
 			</div>
 		</div>
-	)
+	);
 }
