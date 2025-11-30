@@ -238,7 +238,6 @@ const MasonryGallery = () => {
     img127,
     img128,
     img129,
-
   ];
   const [selected, setSelected] = useState(null);
 

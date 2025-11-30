@@ -15,6 +15,9 @@ import {
   FaBorderAll,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { GiCarSeat } from "react-icons/gi";
+import { BsFan } from "react-icons/bs";
+import { BiChip } from "react-icons/bi";
 
 const features = [
   {
@@ -25,7 +28,7 @@ const features = [
     direct: "/seats",
   },
   {
-    icon: <FaChair className="feature-svg" />,
+    icon: <GiCarSeat className="feature-svg" />,
     title: "Car Seat Display",
     description:
       "Premium seating solutions with custom upholstery and heating options for ultimate comfort.",
@@ -64,17 +67,17 @@ const features = [
     direct: "/videos",
   },
   {
-    icon: <FaGamepad className="feature-svg" />,
+    icon: <BiChip className="feature-svg" />,
     title: "Full Body Controller",
     description:
-      "Advanced in-car entertainment systems with touchscreen controls and steering wheel integration.",
+      "We install a smart Full Body Control System that manages all your car’s electrical features—like lights, locks, windows, wipers, and sensors—for safer and smoother control.",
     direct: "/",
   },
   {
-    icon: <FaWind className="feature-svg" />,
-    title: "AC Seats",
+    icon: <BsFan className="feature-svg" />,
+    title: "ventilated seat system",
     description:
-      "Climate-controlled seats with cooling and heating functions for all-season comfort and support.",
+      "We install ventilated seat systems without removing your original seat cover or rexin. Everything is fitted safely inside the seat, giving you cool and comfortable airflow.",
     direct: "/",
   },
 ];
