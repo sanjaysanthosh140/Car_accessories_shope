@@ -6,48 +6,58 @@ import { FaMapPin, FaRupeeSign } from "react-icons/fa";
 const Contact = () => {
   return (
     <section className="contact-container">
-      <div className="contact-card" data-type="phone">
-        <FiPhone className="contact-icon" aria-hidden="true" />
-        <h3>Phone</h3>
-        <p>
-          Contact our shop support team for any inquiries about our services or
-          specific topics
-        </p>
-        <div className="phone-numbers-group">
-          <a
-            href="tel:+919446251263"
-            aria-label="Office phone number: 9446251263"
-          >
-            <span>Office:</span> 9446251263
-          </a>
-          <a
-            href="tel:+919446451263"
-            aria-label="Service phone number: 9446451263"
-          >
-            <span>Service:</span> 9446451263
-          </a>
-          <a
-            href="tel:+918089123433"
-            aria-label="Alternative phone number: 8089123433"
-          >
-            8089123433
-          </a>
-          <a
-            href="tel:+919249451263"
-            aria-label="Alternative phone number: 919249451263"
-          >
-            919249451263
-          </a>
-        </div>
-      </div>
+      {/* <div className="contact-card" data-type="phone"> */}
+        {/* <FiPhone className="contact-icon" aria-hidden="true" /> */}
+        {/* <h3>Phone</h3> */}
+        {/* <p> */}
+          {/* Contact our shop support team for any inquiries about our services or */}
+          {/* specific topics */}
+        {/* </p> */}
+        {/* <div className="phone-numbers-group"> */}
+          {/* <a */}
+             {/* href="tel:+919446251263" */}
+             {/* aria-label="Office phone number: 9446251263" */}
+           {/* > */}
+            {/* <span>Office:</span> 9446251263 */}
+          {/* </a> */}
+          {/* <a */}
+             {/* href="tel:+919446451263" */}
+             {/* aria-label="Service phone number: 9446451263" */}
+           {/* > */}
+            {/* <span>Service:</span> 9446451263 */}
+          {/* </a> */}
+          {/* <a */}
+           {/* href="tel:+918089123433" */}
+             {/* aria-label="Alternative phone number: 8089123433" */}
+           {/* > */}
+            {/* 8089123433 */}
+          {/* </a> */}
+          {/* <a */}
+            {/* href="tel:+919249451263" */}
+             {/* aria-label="Alternative phone number: 919249451263" */}
+           {/* > */}
+            {/* 919249451263 */}
+          {/* </a> */}
+        {/* </div> */}
+      {/* </div> */}
 
       <div className="contact-card" data-type="location">
         <FiMapPin className="contact-icon" aria-hidden="true" />
         <h3>Office Location India</h3>
+
+
+
+        <br />
         <p>
           S garage S.a.road Metro pillar number 836 Janatha in Cochin 682019
           Vyttila ERANAKULAM
         </p>
+        <a
+          href="tel:+919446251263"
+          aria-label="Office phone number: 9446251263"
+        >
+          <span>Office:</span> 9446251263
+        </a>
         <a
           href="https://maps.app.goo.gl/tzV84g8C7ArzmtGr6?g_st=awb"
           target="_blank"
@@ -68,6 +78,12 @@ const Contact = () => {
           682032 ERANAKULAM
         </p>
         <a
+          href="tel:+919446451263"
+          aria-label="Service phone number: 9446451263"
+        >
+          <span>Service:</span> 9446451263
+        </a>
+        <a
           href="https://maps.app.goo.gl/LVRJWYyHvkSmNG8fA
 "
           target="_blank"
@@ -81,17 +97,47 @@ const Contact = () => {
         <FiMapPin className="contact-icon" />
         <h3>Office Location kerala </h3>
         <p>SS Manufacturing Mompany Muthoor Thiruvalla</p>
+        <a
+          href="tel:+918089123433"
+          aria-label="Alternative phone number: 8089123433"
+        >
+          8089123433
+        </a>
       </div>
 
       <div className="contact-card">
         <FiMapPin className="contact-icon" />
         <h3>Office Location kerala</h3>
         <p>Zam Zam Car Care Eranakulam Vytilla</p>
+        <a
+          href="tel:+919446251263"
+          aria-label="Office phone number: 9446251263"
+        >
+          <span>Office:</span> 9446251263
+        </a>
       </div>
+
       <div className="contact-card">
         <FaMapPin className="contact-icon" />
         <h3>Office Location Dubai</h3>
         <p>2 13 St - Al Quoz - Al Quoz Industrial Area 2 - Dubai</p>
+
+        <a
+          href="tel:+00971522881144"
+          aria-label="Alternative phone number: 00971522881144"
+        >
+          00971522881144
+        </a>
+        <a
+          href="https://maps.google.com/?q=25.1380966,55.2453572"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="46QW+64Q Dubai - United Arab Emirates"
+          className="map-link"
+        >
+          <FiMapPin style={{ marginRight: "8px" }} />
+          View on Maps
+        </a>
       </div>
 
       <div className="contact-card">

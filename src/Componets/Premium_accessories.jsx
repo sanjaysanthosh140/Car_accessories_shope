@@ -84,6 +84,43 @@ import img77 from "../assets/premium_accessories/img77.webp";
 import img78 from "../assets/premium_accessories/img78.webp";
 import img79 from "../assets/premium_accessories/img79.webp";
 
+import img80 from "../assets/premium_accessories/img80.webp";
+import img95 from "../assets/premium_accessories/img95.webp";
+import img96 from "../assets/premium_accessories/img96.webp";
+import img97 from "../assets/premium_accessories/img97.webp";
+import img98 from "../assets/premium_accessories/img98.webp";
+import img99 from "../assets/premium_accessories/img99.webp";
+import img100 from "../assets/premium_accessories/img100.webp";
+import img101 from "../assets/premium_accessories/img101.webp";
+import img102 from "../assets/premium_accessories/img102.webp";
+import img103 from "../assets/premium_accessories/img103.webp";
+import img104 from "../assets/premium_accessories/img104.webp";
+import img105 from "../assets/premium_accessories/img105.webp";
+import img106 from "../assets/premium_accessories/img106.webp";
+import img107 from "../assets/premium_accessories/img107.webp";
+import img108 from "../assets/premium_accessories/img108.webp";
+import img109 from "../assets/premium_accessories/img109.webp";
+import img110 from "../assets/premium_accessories/img110.webp";
+import img111 from "../assets/premium_accessories/img111.webp";
+import img112 from "../assets/premium_accessories/img112.webp";
+import img113 from "../assets/premium_accessories/img113.webp";
+import img114 from "../assets/premium_accessories/img114.webp";
+import img115 from "../assets/premium_accessories/img115.webp";
+import img116 from "../assets/premium_accessories/img116.webp";
+import img117 from "../assets/premium_accessories/img117.webp";
+import img118 from "../assets/premium_accessories/img118.webp";
+import img119 from "../assets/premium_accessories/img119.webp";
+import img120 from "../assets/premium_accessories/img120.webp";
+import img121 from "../assets/premium_accessories/img121.webp";
+import img122 from "../assets/premium_accessories/img122.webp";
+import img123 from "../assets/premium_accessories/img123.webp";
+import img124 from "../assets/premium_accessories/img124.webp";
+import img125 from "../assets/premium_accessories/img125.webp";
+import img126 from "../assets/premium_accessories/img126.webp";
+import img127 from "../assets/premium_accessories/img127.webp";
+import img128 from "../assets/premium_accessories/img128.webp";
+import img129 from "../assets/premium_accessories/img129.webp";
+
 const MasonryGallery = () => {
   const images = [
     img1,
@@ -165,6 +202,43 @@ const MasonryGallery = () => {
     img77,
     img78,
     img79,
+    img80,
+    img95,
+    img96,
+    img97,
+    img98,
+    img99,
+    img100,
+    img101,
+    img102,
+    img103,
+    img104,
+    img105,
+    img106,
+    img107,
+    img108,
+    img109,
+    img110,
+    img111,
+    img112,
+    img113,
+    img114,
+    img115,
+    img116,
+    img117,
+    img118,
+    img119,
+    img120,
+    img121,
+    img122,
+    img123,
+    img124,
+    img125,
+    img126,
+    img127,
+    img128,
+    img129,
+
   ];
   const [selected, setSelected] = useState(null);
 

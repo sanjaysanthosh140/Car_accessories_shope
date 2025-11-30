@@ -33,6 +33,34 @@ import img30 from "../assets/seats_30.webp";
 import img31 from "../assets/seats_31.webp";
 import img32 from "../assets/seats_32.webp";
 import img33 from "../assets/seats_33.webp";
+
+import img34 from "../assets/seats_34.webp";
+import img35 from "../assets/seats_35.webp";
+import img36 from "../assets/seats_36.webp";
+import img37 from "../assets/seats_37.webp";
+import img38 from "../assets/seats_38.webp";
+import img39 from "../assets/seats_39.webp";
+import img40 from "../assets/seats_40.webp";
+import img41 from "../assets/seats_41.webp";
+import img42 from "../assets/seats_42.webp";
+import img43 from "../assets/seats_43.webp";
+import img44 from "../assets/seats_44.webp";
+import img45 from "../assets/seats_45.webp";
+import img46 from "../assets/seats_46.webp";
+import img47 from "../assets/seats_47.webp";
+import img48 from "../assets/seats_48.webp";
+import img49 from "../assets/seats_49.webp";
+import img50 from "../assets/seats_50.webp";
+import img51 from "../assets/seats_51.webp";
+import img52 from "../assets/seats_52.webp";
+import img53 from "../assets/seats_53.webp";
+import img54 from "../assets/seats_54.webp";
+import img55 from "../assets/seats_55.webp";
+import img56 from "../assets/seats_56.webp";
+import img57 from "../assets/seats_57.webp";
+import img58 from "../assets/seats_58.webp";
+import img59 from "../assets/seats_59.webp";
+
 const WorkShowcase = () => {
   const images = [
     img1,
@@ -68,12 +96,38 @@ const WorkShowcase = () => {
     img31,
     img32,
     img33,
+    img34,
+    img35,
+    img36,
+    img37,
+    img38,
+    img39,
+    img40,
+    img41,
+    img42,
+    img43,
+    img44,
+    img45,
+    img46,
+    img47,
+    img48,
+    img49,
+    img50,
+    img51,
+    img52,
+    img53,
+    img54,
+    img55,
+    img56,
+    img57,
+    img58,
+    img59,
   ];
 
   const [loadedImages, setLoadedImages] = useState(new Set());
 
   const handleImageLoad = (index) => {
-    setLoadedImages(prev => new Set([...prev, index]));
+    setLoadedImages((prev) => new Set([...prev, index]));
   };
 
   return (
@@ -86,7 +140,9 @@ const WorkShowcase = () => {
                 <img
                   src={img}
                   alt={`Showcase ${index + 1}`}
-                  className={`showcase-image ${!loadedImages.has(index) ? 'loading-shimmer' : ''}`}
+                  className={`showcase-image ${
+                    !loadedImages.has(index) ? "loading-shimmer" : ""
+                  }`}
                   onLoad={() => handleImageLoad(index)}
                   loading="lazy"
                 />
