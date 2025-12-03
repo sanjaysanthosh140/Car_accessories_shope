@@ -23,32 +23,30 @@ import Ventilator_seat from "./Componets/V_seat";
 function App() {
   return (
     <div>
-    
       <BrowserRouter>
-          <Header />
-          <Hero />
-          <Routes>
-            <Route path="/" element={<CategorySection />} />
-            <Route path="/seats" element={<CarSeatDisplay/>} />
-            <Route path="/mat" element={<CarMatDisplay/>} />
-            <Route path='/android' element={<ProductCard/>}/>
-            <Route path='/cart' element={<Gallery/>}/>
-            <Route path='/contact' element={<Contact/>}/>
-            <Route path='/about' element={<VideoSlider/>}/>
-            <Route path='/videos' element={<VideoSlider/>}/>
-            <Route path='/premium' element={<MasonryGallery/>}/>  
-            <Route path="/4D_mats" element={<Car_4D_mats/>}/>
-            <Route path="/5d-mats" element={<Mats5D/>} />
-            <Route path="/7d-mats" element={<Mats7D/>} />
-            <Route path="/vinyl-flooring" element={<VinylFlooring/>} />
-            <Route path="/wind_booster" element={<Wind_booster/>}/>
-            <Route path="/Ventilator_seat" element={<Ventilator_seat/>}/>
-          </Routes>
-          <Locations />
-          <Footer />
-        </BrowserRouter>
-      </div>
-  
+        <Header />
+        <Hero />
+        <Routes>
+          <Route path="/" element={<CategorySection />} />
+          <Route path="/seats" element={<CarSeatDisplay />} />
+          <Route path="/mat" element={<CarMatDisplay />} />
+          <Route path="/android" element={<ProductCard />} />
+          <Route path="/cart" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<VideoSlider />} />
+          <Route path="/videos" element={<VideoSlider />} />
+          <Route path="/premium" element={<MasonryGallery />} />
+          <Route path="/4D_mats" element={<Car_4D_mats />} />
+          <Route path="/5d-mats" element={<Mats5D />} />
+          <Route path="/7d-mats" element={<Mats7D />} />
+          <Route path="/vinyl-flooring" element={<VinylFlooring />} />
+          <Route path="/wind_booster" element={<Wind_booster />} />
+          <Route path="/Ventilator_seat" element={<Ventilator_seat />} />
+        </Routes>
+        <Locations />
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

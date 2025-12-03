@@ -80,18 +80,21 @@ const Footer = () => {
         {/* Contact Section */}
         <div className="footer-column footer-contact">
           <h4>Get In Touch</h4>
-
+          <br />
+          <h4>Dubai</h4>
+          <p>2 13 St - Al Quoz - Al Quoz Industrial Area 2 - Dubai</p>
+          <p>
+            Phone: <a href="tel:+00971522881144">00971522881144</a>
+          </p>
+          <h4>India</h4>
           <p>
             S garage S.A ROAD PILLAR NUMBER 836 JANATHA JN VITTILA ERANAKULAM
             PIN 682019
           </p>
-
           <p>
             S garage AUTO TOUCH MAY FIRST ROAD THAMMANAM P.O THAMMANAM COCHIN
             682032 ERANAKULAM
           </p>
-
-          <p>2 13 St - Al Quoz - Al Quoz Industrial Area 2 - Dubai</p>
 
           <p>
             Phone: <a href="tel:+919447151263">+91 94471 51263</a>
@@ -109,7 +112,9 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} AutoAccents. All Rights Reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} AutoAccents. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

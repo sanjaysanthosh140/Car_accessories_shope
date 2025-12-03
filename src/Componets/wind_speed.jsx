@@ -20,7 +20,7 @@ const images = [
 export default function Wind_booster() {
   return (
     <div className="ps-page">
-      <h1 className="ps-title">Our Products</h1>
+      <h1 className="ps-title">Full Body Controller / wind-booster</h1>
 
       <div className="ps-grid">
         {images.map((src, i) => (

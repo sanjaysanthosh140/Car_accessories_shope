@@ -21,7 +21,7 @@ const images = [
 export default function Ventilator_seat() {
   return (
     <div className="ps-page">
-      <h1 className="ps-title">Our Products</h1>
+      <h1 className="ps-title">ventilated seat system</h1>
 
       <div className="ps-grid">
         {images.map((src, i) => (
