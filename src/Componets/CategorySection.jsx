@@ -71,14 +71,14 @@ const features = [
     title: "Full Body Controller",
     description:
       "We install a smart Full Body Control System that manages all your car’s electrical features—like lights, locks, windows, wipers, and sensors—for safer and smoother control.",
-    direct: "/",
+    direct: "/wind_booster",
   },
   {
     icon: <BsFan className="feature-svg" />,
     title: "ventilated seat system",
     description:
       "We install ventilated seat systems without removing your original seat cover or rexin. Everything is fitted safely inside the seat, giving you cool and comfortable airflow.",
-    direct: "/",
+    direct: "/Ventilator_seat",
   },
 ];
 

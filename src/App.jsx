@@ -15,6 +15,8 @@ import Car_4D_mats from "./Componets/Car_4D_mats";
 import Mats5D from "./Componets/5D_mats";
 import Mats7D from "./Componets/7D_mats";
 import VinylFlooring from "./Componets/Vinyl_flooring";
+import Wind_booster from "./Componets/wind_speed";
+import Ventilator_seat from "./Componets/V_seat";
 // import Gallery from "./Componets/gallary_img";
 //import ClientShowcase from "./Componets/gallary_img"
 
@@ -39,6 +41,8 @@ function App() {
             <Route path="/5d-mats" element={<Mats5D/>} />
             <Route path="/7d-mats" element={<Mats7D/>} />
             <Route path="/vinyl-flooring" element={<VinylFlooring/>} />
+            <Route path="/wind_booster" element={<Wind_booster/>}/>
+            <Route path="/Ventilator_seat" element={<Ventilator_seat/>}/>
           </Routes>
           <Locations />
           <Footer />

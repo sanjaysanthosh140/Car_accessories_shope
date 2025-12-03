@@ -1,0 +1,103 @@
+/* ===== PAGE ===== */
+.ps-page {
+  min-height: 100vh;
+  background: #0a0c10;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Title */
+.ps-title {
+  font-size: 2.6rem;
+  color: #e5e7eb;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* GRID */
+.ps-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* ===== METALLIC ULTRA-GLOSS CARD ===== */
+.ps-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 0 40px rgba(255,255,255,0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.ps-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.7), inset 0 0 60px rgba(255,255,255,0.08);
+}
+
+/* GLASS SHINE ANIMATION */
+.ps-glare {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.2) 0%,
+    rgba(255,255,255,0.05) 50%,
+    rgba(255,255,255,0.2) 100%
+  );
+  pointer-events: none;
+  animation: shine 6s linear infinite;
+}
+
+/* IMAGE AREA */
+.ps-img-box {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* MAIN IMAGE */
+.ps-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* MIRROR REFLECTION */
+.ps-reflection {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleY(-1);
+  opacity: 0.18;
+  filter: blur(8px);
+  bottom: -5px;
+  left: 0;
+}
+
+/* SHINE KEYFRAME */
+@keyframes shine {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ps-img-box { height: 240px; }
+}
+@media (max-width: 480px) {
+  .ps-img-box { height: 180px; }
+  .ps-card { padding: 8px; }
+}

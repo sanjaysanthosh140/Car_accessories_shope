@@ -1,6 +1,7 @@
 // Footer.jsx
 import React from "react";
 import "./Footer.css";
+import { useNavigate } from "react-router-dom";
 import {
   FaFacebookF,
   FaTwitter,
@@ -10,16 +11,19 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="site-footer">
       <div className="footer-container">
+        {/* Brand Section */}
         <div className="footer-column footer-brand">
           <h3 className="footer-logo">AUTO TOUCH</h3>
           <p className="brand-slogan">QUALITY IS OUR SIGNATURE</p>
+
           <div className="social-icons">
             <a
-              href="https://www.facebook.com/shahul.ta.50?mibextid=ZbWKwL
-"
+              href="https://www.facebook.com/shahul.ta.50?mibextid=ZbWKwL"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -27,8 +31,7 @@ const Footer = () => {
               <FaFacebookF />
             </a>
             <a
-              href=" https://instagram.com/s_garage_cochin?igshid=NTc4MTIwNjQ2YQ==
-"
+              href="https://instagram.com/s_garage_cochin?igshid=NTc4MTIwNjQ2YQ=="
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -36,8 +39,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://youtube.com/@sgarage.836
-"
+              href="https://youtube.com/@sgarage.836"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
@@ -47,52 +49,50 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Quick Links */}
         <div className="footer-column footer-links">
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <button onClick={() => navigate("/")}>Home</button>
             </li>
             <li>
-              <a href="/about">About</a>
+              <button onClick={() => navigate("/about")}>About</button>
             </li>
             <li>
-              <a href="/cart">ProductCard</a>
+              <button onClick={() => navigate("/cart")}>ProductCard</button>
             </li>
             <li>
-              <a href="/">Categories</a>
+              <button onClick={() => navigate("/")}>Categories</button>
             </li>
             <li>
-              <a href="/seats">CarSeatDisplay</a>
+              <button onClick={() => navigate("/seats")}>CarSeatDisplay</button>
             </li>
             <li>
-              <a href="/mat">CarMatDisplay</a>
+              <button onClick={() => navigate("/mat")}>CarMatDisplay</button>
             </li>
             <li>
-              <a href="/Contact">Contact</a>
+              <button onClick={() => navigate("/Contact")}>Contact</button>
             </li>
           </ul>
         </div>
 
+        {/* Contact Section */}
         <div className="footer-column footer-contact">
           <h4>Get In Touch</h4>
+
           <p>
-            metro Pillar No 836, S.A Road,Janatha Jn, Vyttila, Amballur,
-            Ernakulam 682019
+            S garage S.A ROAD PILLAR NUMBER 836 JANATHA JN VITTILA ERANAKULAM
+            PIN 682019
           </p>
-          <h4></h4>
+
           <p>
             S garage AUTO TOUCH MAY FIRST ROAD THAMMANAM P.O THAMMANAM COCHIN
             682032 ERANAKULAM
           </p>
-          <h4></h4>
-          <p>
-            2 13 St - Al Quoz - Al Quoz Industrial Area 2 - Dubai
-          </p>
-          {/* <p> */}
-          {/* Email:{" "} */}
-          {/* <a href="mailto:info@autoaccents.com">info@autoaccents.com</a> */}
-          {/* </p> */}
+
+          <p>2 13 St - Al Quoz - Al Quoz Industrial Area 2 - Dubai</p>
+
           <p>
             Phone: <a href="tel:+919447151263">+91 94471 51263</a>
           </p>
@@ -109,9 +109,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>
-          &copy; {new Date().getFullYear()} AutoAccents. All Rights Reserved.
-        </p>
+        <p>&copy; {new Date().getFullYear()} AutoAccents. All Rights Reserved.</p>
       </div>
     </footer>
   );

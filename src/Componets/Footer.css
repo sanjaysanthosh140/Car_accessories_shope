@@ -173,6 +173,14 @@
   position: relative;
   z-index: 1;
 }
+.footer-links button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+}
 
 /* Large Desktop (1400px and up) */
 @media screen and (min-width: 1400px) {
