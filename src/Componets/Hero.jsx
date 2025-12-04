@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="hero-overlay"></div>
             <div className="hero-content">
                 <h1 className="hero-title">AUTO TOUCH</h1>
-                <p className="hero-tagline">Quality is our signature.</p>
+                <p className="hero-tagline">Quality is our signature</p>
                 {/* <button className="hero-cta-button">Shop Now</button> */}
             </div>
         </header>
