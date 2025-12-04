@@ -50,6 +50,10 @@ import img51 from "../assets/7D_mats/mat_img_51.webp";
 import img52 from "../assets/7D_mats/mat_img_52.webp";
 import img53 from "../assets/7D_mats/mat_img_53.webp";
 
+import img54 from "../assets/7D_mats/7D_mats_54.webp";
+import img55 from "../assets/7D_mats/7D_mats_55.webp";
+import img56 from "../assets/7D_mats/7D_mats_56.webp";
+
 const ALL_IMAGES = [
   img1,
   img2,
@@ -92,6 +96,9 @@ const ALL_IMAGES = [
   img51,
   img52,
   img53,
+  img54,
+  img55,
+  img56
 ];
 
 export default function Mats7D() {
