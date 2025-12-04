@@ -137,7 +137,7 @@ const WorkShowcase = () => {
               <div className="showcase-image-container">
                 <LazyLoadImage
                   src={img}
-                  alt={`Showcase ${index + 1}`}
+                  // alt={`Showcase ${index + 1}`}
                   className="showcase-image"
                   effect="blur"          // smooth blur effect
                   loading="lazy"
