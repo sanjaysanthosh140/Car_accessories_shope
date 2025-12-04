@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Premium_accessories.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import img1 from "../assets/premium_accessories/img1.webp";
 import img2 from "../assets/premium_accessories/img2.webp";

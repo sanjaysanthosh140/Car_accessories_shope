@@ -1,6 +1,9 @@
 import React from "react";
 import "./5D_mats.css";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 import img1 from "../assets/5D_mats/5D_Mats_1.webp";
 import img2 from "../assets/5D_mats/5D_Mats_2.webp";
 import img3 from "../assets/5D_mats/5D_Mats_3.webp";
@@ -39,13 +42,22 @@ export default function Mats5D() {
   return (
     <div className="vinyl-page">
       <h1 className="vinyl-title">5D Mats Showcase</h1>
-
-      <div className="vinyl-grid">
+        <div className="vinyl-grid">
         {images.map((src, i) => (
           <div key={i} className="vinyl-card">
             <div className="vinyl-img-box">
-              <img src={src} alt={`5D Mat ${i + 1}`} className="vinyl-img" />
-              <img src={src} alt="" className="vinyl-reflection" />
+              <LazyLoadImage
+                src={src}
+                alt={`5D Mat ${i + 1}`}
+                effect="blur"
+                className="vinyl-img"
+              />
+              <LazyLoadImage
+                src={src}
+                alt=""
+                effect="blur"
+                className="vinyl-reflection"
+              />
             </div>
           </div>
         ))}
