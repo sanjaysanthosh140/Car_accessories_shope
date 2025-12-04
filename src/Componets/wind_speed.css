@@ -2,17 +2,19 @@
 .ps-page {
   min-height: 100vh;
   background: #0a0c10;
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
   color: white;
+
+  /* smoother scrolling */
+  scroll-behavior: smooth;
 }
 
 /* Title */
 .ps-title {
   font-size: 2.6rem;
   color: #e5e7eb;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
+  margin-bottom: 35px;
   font-weight: 700;
 }
 
@@ -21,83 +23,102 @@
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-/* ===== METALLIC ULTRA-GLOSS CARD ===== */
+/* ===== ULTRA GLOSS FAST CARD ===== */
 .ps-card {
   position: relative;
-  border-radius: 20px;
+  border-radius: 18px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(25px) saturate(200%);
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 0 40px rgba(255,255,255,0.05);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  /* LIGHTER GLASS → smooth scroll */
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(8px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  /* LIGHT shadow → fast rendering */
+  box-shadow: 0 10px 18px rgba(0,0,0,0.35);
+
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+
+  /* GPU optimization */
+  will-change: transform, box-shadow;
 }
 
 .ps-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.7), inset 0 0 60px rgba(255,255,255,0.08);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 18px 32px rgba(0,0,0,0.55);
 }
 
-/* GLASS SHINE ANIMATION */
+/* ===== GLARE EFFECT (Optimized) ===== */
 .ps-glare {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(255,255,255,0.2) 0%,
-    rgba(255,255,255,0.05) 50%,
-    rgba(255,255,255,0.2) 100%
+    rgba(255,255,255,0.1) 0%,
+    rgba(255,255,255,0.02) 50%,
+    rgba(255,255,255,0.1) 100%
   );
+
   pointer-events: none;
-  animation: shine 6s linear infinite;
+
+  /* very slow → smoother */
+  animation: shine 10s linear infinite;
 }
 
-/* IMAGE AREA */
+/* ===== IMAGE AREA (FULL BODY COVER) ===== */
 .ps-img-box {
-  position: relative;
   width: 100%;
-  height: 300px;
-  border-radius: 20px;
+  height: 100%;
+
+  /* make image fill entire card */
+  aspect-ratio: 1 / 1.2;
+
+  border-radius: 18px;
   overflow: hidden;
 }
 
-/* MAIN IMAGE */
+/* MAIN IMAGE (FULL CARD BODY) */
 .ps-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+
+  /* remove top-rounded corners */
+  border-radius: 0;
 }
 
-/* MIRROR REFLECTION */
+/* MIRROR REFLECTION (lighter) */
 .ps-reflection {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 45%; /* smaller reflection */
   object-fit: cover;
   transform: scaleY(-1);
-  opacity: 0.18;
-  filter: blur(8px);
+  opacity: 0.12;
+  filter: blur(6px);
   bottom: -5px;
-  left: 0;
 }
 
-/* SHINE KEYFRAME */
+/* Shine keyframe */
 @keyframes shine {
-  0% { background-position: 200% center; }
-  100% { background-position: -200% center; }
+  0% { background-position: 130% center; }
+  100% { background-position: -130% center; }
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .ps-img-box { height: 240px; }
+  .ps-img-box {
+    aspect-ratio: 1 / 1.3;
+  }
 }
+
 @media (max-width: 480px) {
-  .ps-img-box { height: 180px; }
-  .ps-card { padding: 8px; }
+  .ps-img-box {
+    aspect-ratio: 1 / 1.35;
+  }
 }
